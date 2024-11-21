@@ -1,6 +1,7 @@
 ## !!Backend ecommerce no-country c22-10 m-webapp!!
 
 TECNOLOGIAS UTILIZADAS 
+
 *Python
 *Django
 *Postman 
@@ -13,39 +14,39 @@ TECNOLOGIAS UTILIZADAS
 
     ## Agregar python a las variables de entorno (paht)
 
-3. Ubica la ruta de instalación de Python y la copias, generalmente está en:
+1. Ubica la ruta de instalación de Python y la copias, generalmente está en:
 
-C:\PythonXX (si lo instalaste manualmente) o
-C:\Users\<TuUsuario>\AppData\Local\Programs\Python\PythonXX (si usaste el instalador de Python.org).
-Nota: las XX es la versión de Python que instalaste.
+   C:\PythonXX (si lo instalaste manualmente) o
+   C:\Users\<TuUsuario>\AppData\Local\Programs\Python\PythonXX (si usaste el instalador de Python.org).
+   Nota: las XX es la versión de Python que instalaste.
 
-4.En el buscador del computador pon editar las variables de entorno y lo seleccionas, dale click en "Variables de entorno" 
+2.En el buscador del computador pon editar las variables de entorno y lo seleccionas, dale click en "Variables de entorno" 
 busca la variable Path y haz clic en "Editar".
 Haz clic en "Nuevo" y agrega:
 pegas la dirreción que copiaste anteriormente y aceptas y guardas los cambios.
 
-5. Vuelve a entrar a la terminan del computador y cuando copies el comando python --version ya te deberia de reconocer la version de python que instalaste.
+3. Vuelve a entrar a la terminan del computador y cuando copies el comando python --version ya te deberia de reconocer la version de python que instalaste.
 
-6. Para ejecutar el codigo es recomendable descargar PyChram, si no lo instalas en visual studio code instala extenciones de python.
+4. Para ejecutar el codigo es recomendable descargar PyChram, si no lo instalas en visual studio code instala extenciones de python.
 
-7. Cuando ya tengas el codigo en el entorno de desarrollo utilizaresmos los siguientes comandos desde la terminal de este mismo.
+5. Cuando ya tengas el codigo en el entorno de desarrollo utilizaresmos los siguientes comandos desde la terminal de este mismo.
 
 ## Ejecutar el proyecto y el servidor de Django y postman
 
-8. Crear y activar un entorno virtual
+1. Crear y activar un entorno virtual
 python -m venv venv
 .\env\Scripts\activate   
 
-9. Instalar Django y Django REST Framework
+2. Instalar Django y Django REST Framework
     pip install django djangorestframework
 
-10. Verificar la instalación
+3. Verificar la instalación
     python -m django --version
 
-11. Realizar las migraciones de Django
+4. Realizar las migraciones de Django
     python manage.py migrate
 
-12. Ejecutar la API
+5. Ejecutar la API
     python manage.py runserver
 
 
