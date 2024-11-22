@@ -1,14 +1,10 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import Cabecera from "../COMPONENTS/Cabecera";
 
 export const Layout = () => {
   return (
     <div>
-      <nav>
-        <Link to="/home">link1</Link>
-        <Link to="/pagina1">link2</Link>
-        <Link to="/pagina2">link3</Link>
-        <Link to="/otra">fuera de layout</Link>
-      </nav>
+      <Cabecera />
       <main>
         <Outlet />
       </main>
