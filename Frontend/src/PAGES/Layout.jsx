@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Cabecera from "../COMPONENTS/Cabecera";
+import Cabecera from "../COMPONENTS/Layout/Cabecera";
 
 export const Layout = () => {
   return (
