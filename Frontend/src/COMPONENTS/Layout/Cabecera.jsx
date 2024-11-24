@@ -2,11 +2,10 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Link } from "react-router-dom";
+import Buscador from "../Common/Buscador";
 
 function Cabecera() {
   return (
@@ -16,33 +15,20 @@ function Cabecera() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Container>
             <Row>
-              <Col>
+              <Col xs={4}>
                 <Navbar.Brand as={Link} to="/">
                   Pacis
                 </Navbar.Brand>
               </Col>
-              <Col>
-                <Form inline>
-                  <Row>
-                    <Col xs="auto">
-                      <Form.Control
-                        type="text"
-                        placeholder="Buscar"
-                        className=" mr-sm-2"
-                      />
-                    </Col>
-                    <Col xs="auto">
-                      <Button type="submit">Submit</Button>
-                    </Col>
-                  </Row>
-                </Form>
+              <Col xs={4}>
+                <Buscador />
               </Col>
-              <Col md="auto">
-                <Nav.Link as={Link} to="">
+              <Col className="text-end">
+                <Nav.Link as={Link} to="/login">
                   Ingresar
                 </Nav.Link>
               </Col>
-            </Row>{" "}
+            </Row>
             <Row>
               <Col className="text-center">
                 <NavDropdown title="Productos" id="basic-nav-dropdown">
@@ -102,7 +88,7 @@ function Cabecera() {
                 </NavDropdown>
               </Col>
               <Col className="text-center">
-                <Nav.Link as={Link} to="/enlacedos">
+                <Nav.Link as={Link} to="/populares">
                   Productos populares
                 </Nav.Link>
               </Col>
