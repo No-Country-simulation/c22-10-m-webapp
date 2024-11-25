@@ -5,6 +5,7 @@ import { Layout } from "./PAGES/Layout";
 import { Populares } from "./PAGES/Productos/Populares";
 import { Login } from "./PAGES/Auth/Login";
 import { Register } from "./PAGES/Auth/Register";
+import { Auth } from "./PAGES/Auth/Auth";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -16,12 +17,22 @@ const router = createBrowserRouter([
     element: <Populares />,
   },
   {
-    path: "/login",
-    element: <Login />,
-  },
-  {
-    path: "/registro",
-    element: <Register />,
+    path: "/auth",
+    element: <Auth />,
+    children: [
+      {
+        index: true,
+        element: <Login />,
+      },
+      {
+        path: "login",
+        element: <Login />,
+      },
+      {
+        path: "registro",
+        element: <Register />,
+      },
+    ],
   },
 ]);
 function App() {

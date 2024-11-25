@@ -24,11 +24,12 @@ function Cabecera() {
                 <Buscador />
               </Col>
               <Col className="text-end">
-                <Nav.Link as={Link} to="/login">
-                  Ingresar
+                <Nav.Link as={Link} to="/auth">
+                  Iniciar sesión
                 </Nav.Link>
               </Col>
             </Row>
+            <hr />
             <Row>
               <Col className="text-center">
                 <NavDropdown title="Productos" id="basic-nav-dropdown">

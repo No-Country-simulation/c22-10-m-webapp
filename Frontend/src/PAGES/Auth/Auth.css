@@ -1,0 +1,52 @@
+.fondo-auth {
+  height: 100vh;
+  width: 100vw;
+  background: url("../../IMAGES/WEBP/spa.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  opacity: 0.95;
+}
+.fondo-auth h1 {
+  width: 25vw;
+  position: absolute;
+  color: aliceblue;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-10%);
+}
+.login-register-container {
+  background-color: rgba(128, 128, 128, 0.103);
+  position: absolute;
+  height: 100%;
+  width: 49%;
+  left: 50%;
+  backdrop-filter: blur(8px);
+  border: solid rgba(128, 128, 128, 0.575) 1px;
+}
+.container-link-auth {
+  height: 15%;
+  width: 20%;
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  background-color: rgba(128, 128, 128, 0.274);
+  backdrop-filter: blur(8px);
+  border: solid rgba(128, 128, 128, 0.664) 1px;
+  border-radius: 8px;
+  box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.363);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: aliceblue;
+}
+.container-link-auth h6 {
+  margin: 0;
+}
+.container-link-auth a {
+  font-size: 1.4rem;
+
+  font-weight: 700;
+  color: aliceblue;
+}
