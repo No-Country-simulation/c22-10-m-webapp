@@ -1,0 +1,12 @@
+/* App.css */
+.hover-dropdown .dropdown-menu {
+  display: none; /* Oculta el menú por defecto */
+}
+
+.hover-dropdown:hover .dropdown-menu {
+  display: block; /* Muestra el menú cuando se pasa el mouse */
+}
+
+.hover-dropdown .dropdown-menu:hover {
+  display: block; /* Mantiene el menú visible mientras el mouse está sobre el menú */
+}
