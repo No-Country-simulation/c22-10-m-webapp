@@ -21,7 +21,7 @@
   width: 30vw;
   position: absolute;
   top: 45%;
-  left: 5%;
+  left: 8%;
   transform: translateY(-10%);
 }
 .login-register-container {
@@ -29,9 +29,9 @@
   position: absolute;
   height: 100%;
   width: 43%;
-  left: 55%;
+  left: 48%;
   background-color: rgba(128, 128, 128, 0.274);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(6px);
   border-left: solid rgba(128, 128, 128, 0.575) 1px;
   border-right: solid rgba(128, 128, 128, 0.575) 1px;
   display: flex;
@@ -43,7 +43,7 @@
   width: 18%;
   position: absolute;
   bottom: 10%;
-  left: 5%;
+  left: 8%;
   background-color: rgba(128, 128, 128, 0.274);
   backdrop-filter: blur(8px);
   border: solid rgba(128, 128, 128, 0.664) 1px;
