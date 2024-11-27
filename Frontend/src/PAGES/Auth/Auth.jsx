@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import {
   ArrowLeftIcon,
   ArrowRightEndOnRectangleIcon,
-  HomeIcon,
 } from "@heroicons/react/24/outline";
 
 export const Auth = () => {

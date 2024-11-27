@@ -17,7 +17,7 @@ export const Home = () => {
           </Link>
         </Container>
       </div>
-      <div style={{ height: "80vh", width: "100vw" }}>
+      <div style={{ height: "auto", width: "100vw" }}>
         <Testimonios />
       </div>{" "}
     </section>

@@ -8,6 +8,7 @@ export const Layout = () => {
       <main>
         <Outlet />
       </main>
+      <footer>Footer</footer>
     </div>
   );
 };
