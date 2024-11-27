@@ -6,11 +6,22 @@ import { Populares } from "./PAGES/Productos/Populares";
 import { Login } from "./PAGES/Auth/Login";
 import { Register } from "./PAGES/Auth/Register";
 import { Auth } from "./PAGES/Auth/Auth";
+import { Home } from "./PAGES/Home";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
     errorElement: <ErrorPage />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "home",
+        element: <Home />,
+      },
+    ],
   },
   {
     path: "/populares",
