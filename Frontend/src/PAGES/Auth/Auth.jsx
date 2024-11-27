@@ -2,6 +2,7 @@ import { Link, Outlet, useLocation } from "react-router-dom";
 import "./Auth.css";
 import { useState, useEffect } from "react";
 import {
+  ArrowLeftIcon,
   ArrowRightEndOnRectangleIcon,
   HomeIcon,
 } from "@heroicons/react/24/outline";
@@ -54,7 +55,7 @@ export const Auth = () => {
         </Link>
       </div>
       <Link to="/">
-        <HomeIcon
+        <ArrowLeftIcon
           style={{
             position: "absolute",
             width: "30px",
