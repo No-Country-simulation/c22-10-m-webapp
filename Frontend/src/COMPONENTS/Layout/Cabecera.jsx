@@ -82,7 +82,9 @@ const Cabecera = () => {
                 </NavDropdown.Item>
               </NavDropdown>
 
-              <Nav.Link>Kits</Nav.Link>
+              <Nav.Link as={Link} to="kits">
+                Kits
+              </Nav.Link>
             </Nav>
 
             <Nav className="ms-auto">
@@ -96,7 +98,7 @@ const Cabecera = () => {
                 />
                 Ingresar
               </Nav.Link>
-              <Nav.Link href="#soporte">
+              <Nav.Link as={Link} to="/favoritos">
                 <HeartIcon
                   style={{
                     color: "rgba(240, 248, 255, 0.616)",
@@ -106,7 +108,7 @@ const Cabecera = () => {
                 />
                 Favoritos
               </Nav.Link>
-              <Nav.Link href="#soporte">
+              <Nav.Link as={Link} to="/carrito">
                 <ShoppingBagIcon
                   style={{
                     color: "rgba(240, 248, 255, 0.616)",

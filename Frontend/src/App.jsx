@@ -7,6 +7,10 @@ import { Login } from "./PAGES/Auth/Login";
 import { Register } from "./PAGES/Auth/Register";
 import { Auth } from "./PAGES/Auth/Auth";
 import { Home } from "./PAGES/Home";
+import { Carrito } from "./PAGES/Productos/Carrito/Carrito";
+import { Favoritos } from "./PAGES/Productos/Favoritos/Favoritos";
+import { Kits } from "./PAGES/Productos/Kits/Kits";
+import { Productos } from "./PAGES/Productos/Productos/Productos";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,6 +24,14 @@ const router = createBrowserRouter([
       {
         path: "home",
         element: <Home />,
+      },
+      {
+        path: "kits",
+        element: <Kits />,
+      },
+      {
+        path: "productos",
+        element: <Productos />,
       },
     ],
   },
@@ -44,6 +56,14 @@ const router = createBrowserRouter([
         element: <Register />,
       },
     ],
+  },
+  {
+    path: "/carrito",
+    element: <Carrito />,
+  },
+  {
+    path: "/favoritos",
+    element: <Favoritos />,
   },
 ]);
 function App() {
