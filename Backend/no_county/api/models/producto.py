@@ -6,9 +6,10 @@ class Producto(models.Model):
     nombre = models.CharField(max_length=100)
     precio = models.DecimalField(max_digits=10, decimal_places=2)
     descripcion = models.TextField()
+    ingredientes = models.TextField()
+    beneficios = models.TextField()
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE, related_name="productos")
-    imagen = models.ImageField(upload_to='productos/', null=True, blank=True)
-
+    imagen = models.ImageField(upload_to='productos/', null=False, blank=False)
 
     def __str__(self):
         return self.nombre
