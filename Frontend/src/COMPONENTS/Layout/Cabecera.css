@@ -1,4 +1,3 @@
-/* App.css */
 .hover-dropdown .dropdown-menu {
   display: none; /* Oculta el menú por defecto */
 }
@@ -9,4 +8,10 @@
 
 .hover-dropdown .dropdown-menu:hover {
   display: block; /* Mantiene el menú visible mientras el mouse está sobre el menú */
+}
+.navbar {
+  background-color: rgb(130, 119, 120);
+}
+.navbar a {
+  color: white;
 }

@@ -13,7 +13,7 @@ const Cabecera = () => {
   return (
     <header>
       {/* Primer Navbar */}
-      <Navbar bg="dark" variant="dark">
+      <Navbar>
         <Container>
           <Row className="w-100">
             <Col xs={6} sm={4} md={3}>
@@ -31,7 +31,7 @@ const Cabecera = () => {
       </Navbar>
 
       {/* Segundo Navbar con Dropdowns de Productos y Kits */}
-      <Navbar bg="secondary" expand="md" variant="dark">
+      <Navbar expand="md">
         <Container>
           <Navbar.Toggle aria-controls="navbar-main" />
           <Navbar.Collapse id="navbar-main">
