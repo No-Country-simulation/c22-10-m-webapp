@@ -1,6 +1,6 @@
 import { Navbar, Nav, Container, Col, Row, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Image from "react-bootstrap/Image";
+import { ReactComponent as Logo } from "../../IMAGES/SVG/LOGO.svg";
 import Buscador from "../Common/Buscador";
 import {
   HeartIcon,
@@ -15,14 +15,15 @@ const Cabecera = () => {
       {/* Primer Navbar */}
       <Navbar>
         <Container>
-          <Row className="w-100">
-            <Col xs={6} sm={4} md={3}>
+          <Row className="w-100 d-flex align-items-center">
+            <Col xs={6} sm={4} md={3} className="mb-2 mb-sm-0">
               <Navbar.Brand as={Link} to="/">
-                <Image src="" rounded />
-                Mi Logo
+                <Logo
+                  style={{ fill: "white", stroke: "white", height: "8vh" }}
+                />
               </Navbar.Brand>
             </Col>
-            <Col xs={12} sm={8} md={5}>
+            <Col xs={12} sm={8} md={5} className="mt-2 mt-sm-0">
               <Buscador />
             </Col>
             <Col xs={12} sm={4} md={4}></Col>
