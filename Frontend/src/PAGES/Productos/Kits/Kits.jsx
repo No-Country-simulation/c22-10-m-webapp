@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import kitfoto from "../../../IMAGES/WEBP/spa.webp";
 import { Container, Row } from "react-bootstrap";
+import { Producto } from "../Productos/Producto";
 
 export const Kits = () => {
   const kitsDatos = [
@@ -111,6 +112,7 @@ export const Kits = () => {
               </Container>
             </Card.Body>
           </Card>
+          <Producto />
         </article>
       ))}
     </Stack>
