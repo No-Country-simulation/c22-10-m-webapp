@@ -1,5 +1,6 @@
 .hover-dropdown .dropdown-menu {
   display: none; /* Oculta el menú por defecto */
+  background-color: #a7989a;
 }
 
 .hover-dropdown:hover .dropdown-menu {

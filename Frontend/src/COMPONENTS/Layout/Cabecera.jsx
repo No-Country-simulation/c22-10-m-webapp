@@ -47,40 +47,42 @@ const Cabecera = () => {
                 id="productos-dropdown"
                 className="hover-dropdown"
               >
-                <NavDropdown.Item href="#action/3.1">
+                <NavDropdown.Item as={Link} to="categorias/bombas-de-sal">
                   Bombas de sal
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
+                <NavDropdown.Item as={Link} to="categorias/jabones-artesanales">
                   Jabones artesanales
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
+                <NavDropdown.Item as={Link} to="categorias/sales-de-baño">
                   Sales de baño
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
+                <NavDropdown.Item as={Link} to="categorias/velas-aromaticas">
                   Velas aromáticas
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Aceites</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
+                <NavDropdown.Item as={Link} to="categorias/aceites">
+                  Aceites
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="categorias/exfoliantes">
                   Exfoliantes
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
+                <NavDropdown.Item as={Link} to="categorias/mascarillas">
                   Mascarillas
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Cremas</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
+                <NavDropdown.Item as={Link} to="categorias/cremas">
+                  Cremas
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="categorias/esponjas-y-pads">
                   Esponjas y pads
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
+                <NavDropdown.Item as={Link} to="categorias/balsamos-labiales">
                   Balsamos labiales
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Guayas</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Reseñas</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Crear reseñas
+                <NavDropdown.Item as={Link} to="categorias/guayas">
+                  Guayas
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Armá tu kit
-                </NavDropdown.Item>
+                <NavDropdown.Item>Reseñas</NavDropdown.Item>
+                <NavDropdown.Item>Crear reseñas</NavDropdown.Item>
+                <NavDropdown.Item>Armá tu kit</NavDropdown.Item>
               </NavDropdown>
 
               <Nav.Link as={Link} to="kits">
