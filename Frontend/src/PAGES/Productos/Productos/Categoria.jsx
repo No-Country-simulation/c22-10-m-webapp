@@ -68,8 +68,8 @@ export const Categoria = () => {
 
       {productosFiltrados.length > 0 ? (
         <ul>
-          {productosFiltrados.map((producto) => (
-            <li key={producto.id}>{producto.nombre}</li>
+          {productosFiltrados.map((producto, index) => (
+            <li key={index}>{producto.nombre}</li>
           ))}
         </ul>
       ) : (

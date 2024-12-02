@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Select from "react-select";
-const options = [
-  { value: "crema-aloe", label: "Crema de Aloe Vera" },
-  { value: "jabón-menta", label: "Jabón de Menta" },
-  { value: "crema-avena", label: "Crema de Avena" },
-  // Más opciones...
-];
 
 const Buscador = () => {
+  const [productos, setProductos] = useState([]);
+
+  useEffect(() => {
+    fetch("http://127.0.0.1:8000/api/productos/")
+      .then((res) => res.json())
+      .then((data) => {
+        const opciones = data.map((producto) => ({
+          value: producto.nombre,
+          label: producto.nombre,
+        }));
+        setProductos(opciones);
+      })
+      .catch((error) => {
+        console.error("Error al cargar los productos:", error);
+      });
+  }, []);
+
   const customStyles = {
     control: (base) => ({
       ...base,
@@ -40,7 +51,7 @@ const Buscador = () => {
 
   return (
     <Select
-      options={options}
+      options={productos} // Aquí se pasan las opciones obtenidas de la API
       placeholder="¿Qué buscas hoy?"
       styles={customStyles} // Aplica los estilos en línea
     />
