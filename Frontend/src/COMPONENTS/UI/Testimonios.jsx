@@ -7,39 +7,30 @@ function Testimonios() {
   const arrayTestimonios = [
     {
       img: foto,
-      usuario: "user3765",
+      usuario: "Mariana M.",
       valoracion: "estrellitas",
-      comentario: "comentarios",
+      comentario:
+        "Quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas  las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.",
     },
     {
       img: foto,
-      usuario: "user3765",
+      usuario: "Mariana M.",
       valoracion: "estrellitas",
-      comentario: "comentarios",
+      comentario:
+        "Quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas  las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.",
     },
     {
       img: foto,
-      usuario: "user3765",
+      usuario: "Mariana M.",
       valoracion: "estrellitas",
-      comentario: "comentarios",
-    },
-    {
-      img: foto,
-      usuario: "user3765",
-      valoracion: "estrellitas",
-      comentario: "comentarios",
-    },
-    {
-      img: foto,
-      usuario: "user3765",
-      valoracion: "estrellitas",
-      comentario: "comentarios",
+      comentario:
+        "Quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas  las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.",
     },
   ];
   const settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 2,
     autoplay: true,
     speed: 10000,
@@ -83,7 +74,8 @@ function Testimonios() {
   };
   return (
     <div className="slider-container">
-      <Slider {...settings}>
+      <h1>Testimonios</h1>
+      <Slider {...settings} className="slider-testimonios">
         {arrayTestimonios.map((testimonio, index) => (
           <div key={index} className="testimonio">
             <img src={testimonio.img} alt="Cliente Feliz" />
@@ -93,6 +85,7 @@ function Testimonios() {
           </div>
         ))}
       </Slider>
+      <button>Ver más</button>
     </div>
   );
 }
