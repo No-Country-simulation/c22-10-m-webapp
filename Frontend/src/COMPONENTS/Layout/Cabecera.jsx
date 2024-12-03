@@ -37,6 +37,9 @@ const Cabecera = () => {
           <Navbar.Toggle aria-controls="navbar-main" />
           <Navbar.Collapse id="navbar-main">
             <Nav className="me-auto">
+              <Nav.Link as={Link} to="/">
+                Inicio
+              </Nav.Link>
               <Nav.Link as={Link} to="/populares">
                 Productos Populares
               </Nav.Link>

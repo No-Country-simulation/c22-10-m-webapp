@@ -1,80 +1,77 @@
 import { useParams } from "react-router-dom";
-
+import { Container, Row, Stack } from "react-bootstrap";
+import Figure from "react-bootstrap/Figure";
+import { useEffect, useState } from "react";
 export const Categoria = () => {
   // -------------------API---------------------//
-  const apiPrueba = [
-    {
-      id_producto: 4,
-      nombre: "Dream Duo",
-      precio: "6000.00",
-      descripcion: "Kit X2 de bombas de sal para una noche de baño relajante.",
-      ingredientes:
-        "-Bomba Lavanda: Con aceite de lavanda, aceite de jazmín y sal de Himalaya.\r\n-Bomba Valeriana: Con aceite de valeriana, aceite de jazmín y sal de mar.",
-      beneficios:
-        "-Ayuda a relajar el y cuerpo y la mente antes de dormir.\r\n-Deja la piel suave e hidratada.",
-      imagen: "http://127.0.0.1:8000/productos/BOMBAS_DE_SAL_1_S2tYdDA.jpg",
-      categoria: "bombas-de-sal",
-    },
-    {
-      id_producto: 5,
-      nombre: "Morning Glow",
-      precio: "6000.00",
-      descripcion: "Kit X2 Bombas de sal para un baño vitalizante de día.",
-      ingredientes:
-        "-Bomba Limón: Con aceite de naranja, aceite de limón y sal de mar.\r\n-Bomba Menta: Con aceite de eucalipto, aceite de menta y sal de Himalaya.",
-      beneficios:
-        "-Ayuda a aumentar la energía y la vitalidad para empezar el día.\r\n-Deja la piel fresca y revitalizada.",
-      imagen: "http://127.0.0.1:8000/productos/BOMBAS_DE_SAL_2_feRcxoL.jpg",
-      categoria: "bombas-de-sal",
-    },
-    {
-      id_producto: 6,
-      nombre: "Skin Revive",
-      precio: "5500.00",
-      descripcion: "Kit X2 jabones naturales para el día.",
-      ingredientes:
-        "-Jabón Vera: Con aceite de lavanda , aceite de romero y extracto de aloe vera.\r\n-Jabón Valeriana: Con aceite de valeriana, aceite de jazmín y extracto de té de manzanilla.",
-      beneficios:
-        "-Promueve un sueño profundo y reparador.\r\n-Deja la piel suave e hidratada.",
-      imagen: "http://127.0.0.1:8000/productos/JABONES_1.jpg",
-      categoria: "jabones-artesanales",
-    },
-    {
-      id_producto: 7,
-      nombre: "Pure Pair",
-      precio: "5500.00",
-      descripcion: "Kit X2 jabones naturales para la noche.",
-      ingredientes:
-        "-Jabón Lavanda: Con aceite de lavanda, aceite de bergamota y extracto de aloe vera.\r\n-Jabón Manzanilla: Con aceite de valeriana, aceite de jazmín y extracto de té de manzanilla.",
-      beneficios:
-        "-Promueve un sueño profundo y reparador.\r\n-Deja la piel suave e hidratada.",
-      imagen: "http://127.0.0.1:8000/productos/JABONES_2.jpg",
-      categoria: "jabones-artesanales",
-    },
-  ];
+  const [productos, setProductos] = useState([]);
+
+  useEffect(() => {
+    fetch("http://127.0.0.1:8000/api/productos/")
+      .then((res) => res.json())
+      .then((data) => {
+        const opciones = data.map((producto) => ({
+          value: producto.nombre,
+          label: producto.nombre,
+          img: producto.imagen,
+        }));
+        setProductos(opciones);
+      })
+      .catch((error) => {
+        console.error("Error al cargar los productos:", error);
+      });
+  }, []);
   // -------------------API---------------------//
   const { categoria } = useParams();
   const categoriaFormateada = categoria
     .replace(/-/g, " ") // Reemplazamos los guiones por espacios
     .replace(/\b\w/g, (char) => char.toUpperCase()); // Capitalizamos la primera letra de cada palabra
 
-  const productosFiltrados = apiPrueba.filter(
+  const productosFiltrados = productos.filter(
     (producto) => producto.categoria === categoria
   );
 
   return (
-    <div>
-      <h1>{categoriaFormateada}</h1>
+    <article style={{ height: "82vh", width: "100%" }}>
+      <Container className="h-100 w-75" style={{ border: "solid black 1px" }}>
+        <Row
+          className="h-25 align-items-center fs-2"
+          style={{ border: "solid black 1px" }}
+        >
+          {categoriaFormateada}
+        </Row>
 
-      {productosFiltrados.length > 0 ? (
-        <ul>
-          {productosFiltrados.map((producto, index) => (
-            <li key={index}>{producto.nombre}</li>
-          ))}
-        </ul>
-      ) : (
-        <p>No hay productos disponibles en esta categoría.</p>
-      )}
-    </div>
+        <Row className="h-75" style={{ border: "solid black 1px" }}>
+          {productosFiltrados.length > 0 ? (
+            <Stack direction="horizontal" gap={3}>
+              {productosFiltrados.map((producto, index) => (
+                <Figure
+                  key={index}
+                  style={{ border: "solid black 1px" }}
+                  className="w-25 h-100 m-0"
+                >
+                  <Figure.Image
+                    width={171}
+                    height={180}
+                    alt="171x180"
+                    src={producto.img}
+                  />
+                  <Figure.Caption>{producto.nombre}</Figure.Caption>
+                </Figure>
+              ))}
+            </Stack>
+          ) : (
+            <p>No hay productos disponibles en esta categoría.</p>
+          )}
+        </Row>
+      </Container>
+    </article>
   );
 };
+{
+  /* {productosFiltrados.map((producto, index) => (
+                <div key={index} style={{ border: "solid black 1px" }}>
+                  {producto.nombre}
+                </div>
+              ))} */
+}
