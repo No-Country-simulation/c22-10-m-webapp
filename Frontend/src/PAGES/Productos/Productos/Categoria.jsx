@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { Container, Row, Stack } from "react-bootstrap";
 import Figure from "react-bootstrap/Figure";
 import { useEffect, useState } from "react";
+
 export const Categoria = () => {
   // -------------------API---------------------//
   const [productos, setProductos] = useState([]);
@@ -10,11 +11,7 @@ export const Categoria = () => {
     fetch("http://127.0.0.1:8000/api/productos/")
       .then((res) => res.json())
       .then((data) => {
-        const opciones = data.map((producto) => ({
-          value: producto.nombre,
-          label: producto.nombre,
-          img: producto.imagen,
-        }));
+        const opciones = data.map((producto) => producto); // Mapear directamente los productos
         setProductos(opciones);
       })
       .catch((error) => {
@@ -22,14 +19,27 @@ export const Categoria = () => {
       });
   }, []);
   // -------------------API---------------------//
-  const { categoria } = useParams();
-  const categoriaFormateada = categoria
-    .replace(/-/g, " ") // Reemplazamos los guiones por espacios
-    .replace(/\b\w/g, (char) => char.toUpperCase()); // Capitalizamos la primera letra de cada palabra
 
+  const { categoria } = useParams();
+
+  // Mapeo de categorías con sus respectivos IDs
+  const categoriasMap = {
+    "bombas-de-sal": 1,
+    "jabones-artesanales": 2,
+  };
+
+  // Obtener el ID de la categoría desde la ruta dinámica
+  const categoriaId = categoriasMap[categoria];
+
+  // Filtrar los productos por el ID de la categoría
   const productosFiltrados = productos.filter(
-    (producto) => producto.categoria === categoria
+    (producto) => producto.categoria === categoriaId
   );
+
+  // Capitalizar y formatear el nombre de la categoría solo para mostrar
+  const categoriaFormateada = categoria
+    .replace(/-/g, " ") // Reemplazar guiones por espacios
+    .replace(/\b\w/g, (char) => char.toUpperCase()); // Capitalizar la primera letra de cada palabra
 
   return (
     <article style={{ height: "82vh", width: "100%" }}>
@@ -54,7 +64,7 @@ export const Categoria = () => {
                     width={171}
                     height={180}
                     alt="171x180"
-                    src={producto.img}
+                    src={producto.imagen}
                   />
                   <Figure.Caption>{producto.nombre}</Figure.Caption>
                 </Figure>
@@ -68,10 +78,3 @@ export const Categoria = () => {
     </article>
   );
 };
-{
-  /* {productosFiltrados.map((producto, index) => (
-                <div key={index} style={{ border: "solid black 1px" }}>
-                  {producto.nombre}
-                </div>
-              ))} */
-}
