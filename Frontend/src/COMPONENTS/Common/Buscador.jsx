@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";
 import Select from "react-select";
+import { useNavigate } from "react-router-dom"; // Importamos useNavigate
 
 const Buscador = () => {
   const [productos, setProductos] = useState([]);
+  const navigate = useNavigate(); // Inicializamos el hook de navegación
 
   useEffect(() => {
     fetch("http://127.0.0.1:8000/api/productos/")
       .then((res) => res.json())
       .then((data) => {
         const opciones = data.map((producto) => ({
-          value: producto.nombre,
+          value: producto.id_producto, // Suponiendo que cada producto tiene un id único
           label: producto.nombre,
         }));
         setProductos(opciones);
@@ -49,11 +51,19 @@ const Buscador = () => {
     }),
   };
 
+  // Función que maneja el cambio de selección
+  const handleChange = (selectedOption) => {
+    if (selectedOption) {
+      navigate(`/productos/${selectedOption.value}`); // Navegar a la página del producto
+    }
+  };
+
   return (
     <Select
       options={productos} // Aquí se pasan las opciones obtenidas de la API
       placeholder="¿Qué buscas hoy?"
       styles={customStyles} // Aplica los estilos en línea
+      onChange={handleChange} // Asignamos la función de manejo de selección
     />
   );
 };

@@ -11,6 +11,7 @@ import { Carrito } from "./PAGES/Productos/Carrito/Carrito";
 import { Favoritos } from "./PAGES/Productos/Favoritos/Favoritos";
 import { Kits } from "./PAGES/Productos/Kits/Kits";
 import { Productos } from "./PAGES/Productos/Productos/Productos";
+import { Producto } from "./PAGES/Productos/Productos/Producto";
 import { Categoria } from "./PAGES/Productos/Productos/Categoria";
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "categorias/:categoria",
         element: <Categoria />,
+      },
+      {
+        path: "productos/:id",
+        element: <Producto />,
       },
     ],
   },
