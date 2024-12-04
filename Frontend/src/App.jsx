@@ -32,6 +32,10 @@ const router = createBrowserRouter([
         element: <Productos />,
       },
       {
+        path: "populares",
+        element: <Populares />,
+      },
+      {
         path: "kits",
         element: <Kits />,
       },
@@ -45,10 +49,7 @@ const router = createBrowserRouter([
       },
     ],
   },
-  {
-    path: "/populares",
-    element: <Populares />,
-  },
+
   {
     path: "/auth",
     element: <Auth />,
