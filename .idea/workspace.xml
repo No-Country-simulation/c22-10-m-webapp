@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="30f0714f-a6e6-4d99-8624-c754db574711" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/no_county/api/models/producto.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/no_county/api/models/producto.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/no_county/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/no_county/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,12 +38,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;ingredientes&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "api"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\c22-10-m-webapp\Backend\no_county\media" />
