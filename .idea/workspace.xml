@@ -40,9 +40,20 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+<<<<<<< HEAD
     "git-widget-placeholder": "back-dev"
   }
 }]]></component>
+=======
+    "git-widget-placeholder": "api"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\c22-10-m-webapp\Backend\no_county\media" />
+    </key>
+  </component>
+>>>>>>> api
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
