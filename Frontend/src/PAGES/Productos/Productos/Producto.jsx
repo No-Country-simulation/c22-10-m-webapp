@@ -27,7 +27,7 @@ export const Producto = () => {
     <div className="producto-details">
       <h1>{producto.nombre}</h1>
       <img
-        src={producto.imagen}
+        src={Producto.imagen}
         alt={producto.nombre}
         style={{ width: "100%", maxWidth: "500px" }}
       />
