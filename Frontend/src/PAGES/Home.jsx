@@ -2,6 +2,7 @@ import { Banner } from "../COMPONENTS/UI/Banner";
 import Testimonios from "../COMPONENTS/UI/Testimonios";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { Populares } from "./Productos/Productos/Populares";
 
 export const Home = () => {
   return (
@@ -19,9 +20,8 @@ export const Home = () => {
           <Banner />
         </Container>
       </div>
-      <div style={{ height: "auto", width: "100vw" }}>
-        <Testimonios />
-      </div>{" "}
+      <Populares />
+      <Testimonios />
     </section>
   );
 };

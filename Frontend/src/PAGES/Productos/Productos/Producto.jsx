@@ -60,27 +60,3 @@ export const Producto = () => {
     </article>
   );
 };
-{
-  /* <div className="producto-details">
-<h1>{producto.nombre}</h1>
-<img
-  src={producto.imagen}
-  alt={producto.nombre}
-  style={{ width: "100%", maxWidth: "500px" }}
-/>
-<p>
-  <strong>Precio:</strong> ${producto.precio}
-</p>
-<p>
-  <strong>Descripción:</strong> {producto.descripcion}
-</p>
-<p>
-  <strong>Ingredientes:</strong>
-</p>
-<pre>{producto.ingredientes}</pre>
-<p>
-  <strong>Beneficios:</strong>
-</p>
-<pre>{producto.beneficios}</pre>
-</div> */
-}
