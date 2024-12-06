@@ -31,17 +31,37 @@ const KitCard = ({ kit, index, kitToggles, handleToggle }) => {
         display: "flex",
         flexDirection: "row",
         border: "none",
-        backgroundColor: isDay ? "rgb(207, 196, 197)" : "rgb(77, 70, 71)",
+        backgroundColor: isDay ? "rgb(248, 246, 246)" : "rgb(77, 70, 71)",
         color: isDay ? "rgb(15, 14, 14)" : "rgb(254, 250, 249)",
       }}
       className="w-75"
     >
+      <h5
+        style={{
+          position: "absolute",
+          top: "40px",
+          left: "40px",
+          color: "white",
+          backgroundColor: "rgba(110, 98, 99, 0.705)",
+          padding: "10px 20px",
+          borderRadius: "50px",
+        }}
+      >
+        Blom nose
+      </h5>
       <Card.Img
         variant="top"
         src={isDay ? kit.dia.img : kit.noche.img}
-        style={{ width: "50%", height: "100%", objectFit: "cover" }}
+        style={{
+          width: "40%",
+          height: "auto",
+          objectFit: "cover",
+          margin: "20px",
+          borderRadius: "10px",
+          boxSizing: "content-box",
+        }}
       />
-      <Card.Body>
+      <Card.Body className="m-3 p-0">
         <Container className="w-100 h-100">
           <Row className="h-25 d-flex align-items-center justify-content-evenly">
             <ToggleButton
@@ -57,36 +77,26 @@ const KitCard = ({ kit, index, kitToggles, handleToggle }) => {
               Noche
             </ToggleButton>
           </Row>
-          <hr />
-          <Row className="h-25">
-            <Col className="d-flex flex-column justify-content-evenly">
-              <Row>
-                <li>{isDay ? kit.dia.kit.p1 : kit.noche.kit.p1}</li>
-              </Row>
-              <Row>
-                <li>{isDay ? kit.dia.kit.p2 : kit.noche.kit.p2}</li>
-              </Row>
-            </Col>
-            <Col className="d-flex flex-column justify-content-evenly">
-              <Row>
-                <li>{isDay ? kit.dia.kit.p3 : kit.noche.kit.p3}</li>
-              </Row>
-              <Row>
-                <li>{isDay ? kit.dia.kit.p4 : kit.noche.kit.p4}</li>
-              </Row>
-            </Col>
-          </Row>
-          <Row className="h-50 overflow-hidden">
-            <Card.Text
-              className="text-wrap text-break"
-              style={{
-                overflow: "hidden",
-                textOverflow: "ellipsis",
-                whiteSpace: "normal",
-              }}
-            >
-              {isDay ? kit.dia.parrafo : kit.noche.parrafo}
-            </Card.Text>
+          <Row className="h-75">
+            <Row className="h-25">
+              <h5>Descripción:</h5>
+              <p>{isDay ? kit.dia.parrafo : kit.noche.parrafo}</p>
+            </Row>
+            <Row className="h-25">
+              <h5>Incluye:</h5>
+              <p>{isDay ? kit.dia.kit.p1 : kit.noche.kit.p1}</p>
+              <p>{isDay ? kit.dia.kit.p2 : kit.noche.kit.p2}</p>
+            </Row>
+            <Row className="h-25 w-100 d-flex align-items-center">
+              <Col xs="auto">
+                <h5>Beneficios:</h5>
+                <p>parrafo</p>
+                <p>parrafo</p>
+              </Col>
+              <Col xs="auto" className="h-50 ms-auto d-flex flex-column">
+                <span className="mt-auto">Precio: $50000</span>
+              </Col>
+            </Row>
           </Row>
         </Container>
       </Card.Body>
@@ -148,25 +158,27 @@ export const Kits = () => {
   };
 
   return (
-    <Stack gap={5} className="my-5 align-items-center">
-      {kitsDatos.map((kit, index) => (
-        <article
-          key={index}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <h2>{kit.nombre}</h2>
-          <KitCard
-            kit={kit}
-            index={index}
-            kitToggles={kitToggles}
-            handleToggle={handleToggle}
-          />
-        </article>
-      ))}
-    </Stack>
+    <section>
+      <h1 style={{ padding: "5vh 0 0 15vw" }}>Kits</h1>
+      <Stack gap={5} className="my-5 align-items-center">
+        {kitsDatos.map((kit, index) => (
+          <article
+            key={index}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <KitCard
+              kit={kit}
+              index={index}
+              kitToggles={kitToggles}
+              handleToggle={handleToggle}
+            />
+          </article>
+        ))}
+      </Stack>
+    </section>
   );
 };

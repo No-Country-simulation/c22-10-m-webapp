@@ -9,6 +9,7 @@ export const Layout = () => {
       style={{
         minHeight: "100vh",
         position: "relative",
+        backgroundColor: "rgb(200, 196, 196)",
       }}
     >
       <Cabecera />
