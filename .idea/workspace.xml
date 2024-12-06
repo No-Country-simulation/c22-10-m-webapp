@@ -6,7 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="30f0714f-a6e6-4d99-8624-c754db574711" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/Backend/no_county/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/no_county/db.sqlite3" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/Backend/no_county/no_county/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/no_county/no_county/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/no_county/productos/BOMBAS_DE_SAL_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/no_county/media/productos/BOMBAS_DE_SAL_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/no_county/productos/BOMBAS_DE_SAL_1_S2tYdDA.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/no_county/media/productos/BOMBAS_DE_SAL_1_S2tYdDA.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/no_county/productos/BOMBAS_DE_SAL_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/no_county/media/productos/BOMBAS_DE_SAL_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/no_county/productos/BOMBAS_DE_SAL_2_feRcxoL.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/no_county/media/productos/BOMBAS_DE_SAL_2_feRcxoL.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/no_county/productos/JABONES_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/no_county/media/productos/JABONES_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/no_county/productos/JABONES_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/no_county/media/productos/JABONES_2.jpg" afterDir="false" />
+>>>>>>> front
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +47,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -48,12 +59,23 @@
     "git-widget-placeholder": "api"
   }
 }]]></component>
+=======
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;front&quot;
+  }
+}</component>
+>>>>>>> front
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\c22-10-m-webapp\Backend\no_county\media" />
     </key>
   </component>
+<<<<<<< HEAD
 >>>>>>> api
+=======
+>>>>>>> front
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

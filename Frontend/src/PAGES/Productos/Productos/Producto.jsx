@@ -29,7 +29,7 @@ export const Producto = () => {
       <img
         src={producto.imagen}
         alt={producto.nombre}
-        style={{ width: "100%", maxWidth: "500px" }}
+        style={{ width: "100%", maxWidth: "200px" }}
       />
       <p>
         <strong>Precio:</strong> ${producto.precio}
