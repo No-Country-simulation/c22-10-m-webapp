@@ -2,13 +2,14 @@ import { Link, Outlet } from "react-router-dom";
 import Cabecera from "../COMPONENTS/Layout/Cabecera";
 import { Col, Container, Image, Row, Stack } from "react-bootstrap";
 import logo_footer from "../IMAGES/WEBP/image.png";
-
+import { ReactComponent as Logo } from "../IMAGES/SVG/LOGO.svg";
 export const Layout = () => {
   return (
     <div
       style={{
         minHeight: "100vh",
         position: "relative",
+        backgroundColor: "rgb(200, 196, 196)",
       }}
     >
       <Cabecera />
@@ -29,11 +30,11 @@ export const Layout = () => {
             {/* Logo (más ancho) */}
             <Col
               xs={12}
-              md={6}
-              lg={4}
+              md={3}
+              lg={3}
               className="mb-3 mb-lg-0 d-flex justify-content-center align-items-center"
             >
-              <Image src={logo_footer} fluid />
+              <Logo style={{ fill: "white", stroke: "white", height: "8vh" }} />
             </Col>
 
             {/* Productos */}

@@ -1,3 +1,9 @@
+import { Populares } from "../Productos/Populares";
+
 export const Favoritos = () => {
-  return <div>Favoritos</div>;
+  return (
+    <>
+      <Populares />
+    </>
+  );
 };

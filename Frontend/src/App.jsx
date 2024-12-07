@@ -2,7 +2,6 @@ import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ErrorPage } from "./PAGES/ErrorPage";
 import { Layout } from "./PAGES/Layout";
-import { Populares } from "./PAGES/Productos/Populares";
 import { Login } from "./PAGES/Auth/Login";
 import { Register } from "./PAGES/Auth/Register";
 import { Auth } from "./PAGES/Auth/Auth";
@@ -10,7 +9,9 @@ import { Home } from "./PAGES/Home";
 import { Carrito } from "./PAGES/Productos/Carrito/Carrito";
 import { Favoritos } from "./PAGES/Productos/Favoritos/Favoritos";
 import { Kits } from "./PAGES/Productos/Kits/Kits";
-import { Productos } from "./PAGES/Productos/Productos/Productos";
+import { Producto } from "./PAGES/Productos/Productos/Producto";
+import { Categoria } from "./PAGES/Productos/Productos/Categoria";
+import { Populares } from "./PAGES/Productos/Productos/Populares";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,19 +27,28 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
+        path: "populares",
+        element: <Populares />,
+      },
+      {
         path: "kits",
         element: <Kits />,
       },
       {
-        path: "productos",
-        element: <Productos />,
+        path: "categorias/:categoria",
+        element: <Categoria />,
+      },
+      {
+        path: "productos/:id",
+        element: <Producto />,
+      },
+      {
+        path: "favoritos",
+        element: <Favoritos />,
       },
     ],
   },
-  {
-    path: "/populares",
-    element: <Populares />,
-  },
+
   {
     path: "/auth",
     element: <Auth />,
@@ -60,10 +70,6 @@ const router = createBrowserRouter([
   {
     path: "/carrito",
     element: <Carrito />,
-  },
-  {
-    path: "/favoritos",
-    element: <Favoritos />,
   },
 ]);
 function App() {

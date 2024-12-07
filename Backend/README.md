@@ -1,57 +1,34 @@
-## !!Backend ecommerce no-country c22-10 m-webapp!!
+# Pasos para levantar el servidor
 
-TECNOLOGIAS UTILIZADAS 
+## Tener instalados los programas:
 
-*Python
-*Django
-*Postman 
+-Python (versión superior a la 3.12.00) ó enlace de descarga de la versión exacta:
+"https://www.python.org/ftp/python/3.12.6/python-3.12.6-amd64.exe"
 
-## !! Pasos para clonar el codigo con exito !!
-1. Descargar python recomendable versiones superiores a la 3.12.0
+-Node.js
 
-2. Cuando lo tengas instalado, entra a la consola de tú computador y pon el comando python --version,
-   si te reconoce la version que instalaste saltate el paso siguiente
+### Si desemos editar codigo del Backend ,descargar:
 
- ## Agregar python a las variables de entorno (path)
+-PyCharm
 
- 1. Ubica la ruta de instalación de Python y la copias, generalmente está en:
+## 1.Activar el entorno virtual:
 
-      C:\PythonXX (si lo instalaste manualmente) o
-    
-      C:\Users\<TuUsuario>\AppData\Local\Programs\Python\PythonXX (si usaste el instalador de Python.org).
-    
-      Nota: las XX es la versión de Python que instalaste.
+1.En la cmd nos posicionas en la ruta "C:\c22-10-m-webapp\Backend\env\Scripts>".
 
-2. En el buscador del computador escribe editar las variables de entorno y lo seleccionas, dale click en "Variables de entorno" 
-      busca la variable Path y haz click en "Editar".
-      
-      Haz click en "Nuevo" y agrega.
-   
-      Pegas la dirreción que copiaste anteriormente y aceptas y guardas los cambios.
+2.aplicamos el comando : "activate" ---> te deberia mostrar lo siguiente:
+"(env) C:\c22-10-m-webapp\Backend\env\Scripts>"
 
-4. Vuelve a entrar a la terminan del computador y cuando copies el comando python --version ya te deberia de reconocer la version de       python que instalaste.
+## 2.Instalar depencias o requerimientos del backend,algunos de ellos importantes son:
 
-5. Para ejecutar el codigo es recomendable descargar PyChram, si no lo instalas en visual studio code instala extenciones de python.
+-Django Cors -----------> se instala con:
+"pip install django-cors-headers"
 
-6. Cuando ya tengas el codigo en el entorno de desarrollo utilizaresmos los siguientes comandos desde la terminal de este mismo.
+-Pillow -----> se instala con :
+"python -m pip install Pillow"
 
-## Ejecutar el proyecto y el servidor de Django y postman
+Luego de instalarlos ,volver a correr el servidor con
 
-1. Crear y activar un entorno virtual
-   python -m venv venv
-   .\env\Scripts\activate   
+## 3.Iniciar servidor :
 
-2. Instalar Django y Django REST Framework
-    pip install django djangorestframework
-
-3. Verificar la instalación
-    python -m django --version
-
-4. Realizar las migraciones de Django
-    python manage.py migrate
-
-5. Ejecutar la API
-    python manage.py runserver
-
-
-
+1.Moverse a la carpeta "no_county" ,su ruta es "C:\c22-10-m-webapp\Backend\no_county>"
+2.Posicionados en "no_county" , aplicar el comando : "python manage.py runserver"

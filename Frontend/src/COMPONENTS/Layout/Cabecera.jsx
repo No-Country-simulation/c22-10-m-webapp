@@ -1,6 +1,6 @@
 import { Navbar, Nav, Container, Col, Row, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Image from "react-bootstrap/Image";
+import { ReactComponent as Logo } from "../../IMAGES/SVG/LOGO.svg";
 import Buscador from "../Common/Buscador";
 import {
   HeartIcon,
@@ -15,14 +15,15 @@ const Cabecera = () => {
       {/* Primer Navbar */}
       <Navbar>
         <Container>
-          <Row className="w-100">
-            <Col xs={6} sm={4} md={3}>
+          <Row className="w-100 d-flex align-items-center">
+            <Col xs={6} sm={4} md={3} className="mb-2 mb-sm-0">
               <Navbar.Brand as={Link} to="/">
-                <Image src="" rounded />
-                Mi Logo
+                <Logo
+                  style={{ fill: "white", stroke: "white", height: "8vh" }}
+                />
               </Navbar.Brand>
             </Col>
-            <Col xs={12} sm={8} md={5}>
+            <Col xs={12} sm={8} md={5} className="mt-2 mt-sm-0">
               <Buscador />
             </Col>
             <Col xs={12} sm={4} md={4}></Col>
@@ -36,6 +37,9 @@ const Cabecera = () => {
           <Navbar.Toggle aria-controls="navbar-main" />
           <Navbar.Collapse id="navbar-main">
             <Nav className="me-auto">
+              <Nav.Link as={Link} to="/">
+                Inicio
+              </Nav.Link>
               <Nav.Link as={Link} to="/populares">
                 Productos Populares
               </Nav.Link>
@@ -46,40 +50,42 @@ const Cabecera = () => {
                 id="productos-dropdown"
                 className="hover-dropdown"
               >
-                <NavDropdown.Item href="#action/3.1">
+                <NavDropdown.Item as={Link} to="categorias/bombas-de-sal">
                   Bombas de sal
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
+                <NavDropdown.Item as={Link} to="categorias/jabones-artesanales">
                   Jabones artesanales
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
+                <NavDropdown.Item as={Link} to="categorias/sales-de-baño">
                   Sales de baño
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
+                <NavDropdown.Item as={Link} to="categorias/velas-aromaticas">
                   Velas aromáticas
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Aceites</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
+                <NavDropdown.Item as={Link} to="categorias/aceites">
+                  Aceites
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="categorias/exfoliantes">
                   Exfoliantes
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
+                <NavDropdown.Item as={Link} to="categorias/mascarillas">
                   Mascarillas
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Cremas</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
+                <NavDropdown.Item as={Link} to="categorias/cremas">
+                  Cremas
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="categorias/esponjas-y-pads">
                   Esponjas y pads
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
+                <NavDropdown.Item as={Link} to="categorias/balsamos-labiales">
                   Balsamos labiales
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Guayas</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Reseñas</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Crear reseñas
+                <NavDropdown.Item as={Link} to="categorias/guayas">
+                  Guayas
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Armá tu kit
-                </NavDropdown.Item>
+                <NavDropdown.Item>Reseñas</NavDropdown.Item>
+                <NavDropdown.Item>Crear reseñas</NavDropdown.Item>
+                <NavDropdown.Item>Armá tu kit</NavDropdown.Item>
               </NavDropdown>
 
               <Nav.Link as={Link} to="kits">

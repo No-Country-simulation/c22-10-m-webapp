@@ -1,0 +1,51 @@
+.container-pop {
+  width: 100%;
+  min-height: 200vh;
+  height: 200vh;
+  background-color: rgb(222, 215, 215);
+}
+.container-pop h1 {
+  height: 10%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-pop section {
+  height: 90%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  box-sizing: border-box;
+  padding: 5vh;
+  grid-gap: 5vh;
+}
+.btn-card-favorito {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 3%;
+  top: 3%;
+  border-radius: 50%;
+  background-color: rgb(88, 81, 82);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-btns-pop button {
+  background-color: rgb(72, 58, 58);
+  border: none;
+}
+.container-btns-pop > :nth-child(1) {
+  flex: 0.6;
+  border-radius: 50px;
+}
+.container-btns-pop > :nth-child(2) {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
