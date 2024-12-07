@@ -1,11 +1,15 @@
 .item-banner {
   height: 100%;
+  width: 100%;
   position: relative;
+  background-color: black;
 }
 .item-banner img {
   height: 100%;
-  width: auto;
+  width: 100%;
   margin: auto;
+  object-fit: cover;
+  opacity: 0.6;
 }
 .item-banner figcaption {
   position: absolute;

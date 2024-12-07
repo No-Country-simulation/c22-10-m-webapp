@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
-import foto from "../../IMAGES/WEBP/fotocl.webp";
+import b1 from "../../IMAGES/WEBP/banner1.jpg";
+import b2 from "../../IMAGES/WEBP/banner2.jpg";
 import "./Banner.css";
 
 export const Banner = () => {
@@ -94,22 +95,11 @@ export const Banner = () => {
   return (
     <Slider {...settings} className="slider-banner">
       <figure className="item-banner">
-        <img src={foto} alt="Banner" />
+        <img src={b1} alt="Banner" />
         <figcaption>Texto descriptivo</figcaption>
-      </figure>
+      </figure>{" "}
       <figure className="item-banner">
-        <img src={foto} alt="Banner" />
-        <figcaption>Texto descriptivo</figcaption>
-      </figure>
-      <figure className="item-banner">
-        <img src={foto} alt="Banner" />
-        <figcaption>Texto descriptivo</figcaption>
-      </figure>
-      <figure className="item-banner">
-        <img src={foto} alt="Banner" />
-      </figure>
-      <figure className="item-banner">
-        <img src={foto} alt="Banner" />
+        <img src={b2} alt="Banner" />
         <figcaption>Texto descriptivo</figcaption>
       </figure>
     </Slider>
