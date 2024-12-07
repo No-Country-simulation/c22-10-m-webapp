@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import { Container, Row, Stack } from "react-bootstrap";
 import Figure from "react-bootstrap/Figure";
 import { useEffect, useState } from "react";
+import foto from "../../../IMAGES/WEBP/BOMBAS DE SAL 1.jpg";
+import { HeartIcon } from "@heroicons/react/24/solid";
 
 export const Categoria = () => {
   // -------------------API---------------------//
@@ -43,30 +45,56 @@ export const Categoria = () => {
 
   return (
     <article style={{ height: "82vh", width: "100%" }}>
-      <Container className="h-100 w-75" style={{ border: "solid black 1px" }}>
-        <Row
-          className="h-25 align-items-center fs-2"
-          style={{ border: "solid black 1px" }}
-        >
+      <Container className="h-100 w-75 p-0">
+        <Row className="h-25 w-100 m-0 align-items-center fs-2">
           {categoriaFormateada}
         </Row>
 
-        <Row className="h-75" style={{ border: "solid black 1px" }}>
+        <Row className="h-75 w-100 m-0">
           {productosFiltrados.length > 0 ? (
-            <Stack direction="horizontal" gap={3}>
+            <Stack direction="horizontal" gap={5}>
               {productosFiltrados.map((producto, index) => (
                 <Figure
                   key={index}
-                  style={{ border: "solid black 1px" }}
-                  className="w-25 h-100 m-0"
+                  style={{
+                    borderRadius: "10px",
+                    overflow: "hidden",
+                    position: "relative",
+                  }}
+                  className="w-25 m-0"
                 >
+                  <button className="btn-card-favorito">
+                    <HeartIcon
+                      style={{
+                        stroke: "white",
+                        color: "transparent",
+                      }}
+                    />
+                  </button>
                   <Figure.Image
-                    width={171}
-                    height={180}
                     alt="171x180"
-                    src={producto.imagen}
+                    src={foto}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "contain",
+                      margin: "0",
+                    }}
                   />
-                  <Figure.Caption>{producto.nombre}</Figure.Caption>
+                  <Figure.Caption
+                    style={{
+                      position: "absolute",
+                      bottom: "10px", // O donde prefieras posicionarlo
+                      left: "10px", // También puedes usar `right`, `top`, etc.
+                      background: "rgba(0, 0, 0, 0.7)", // Fondo oscuro semitransparente para destacar el texto
+                      color: "white",
+                      padding: "5px",
+                      borderRadius: "4px", // Estilo opcional
+                      fontSize: "0.9rem", // Tamaño de texto ajustado
+                    }}
+                  >
+                    {producto.nombre}
+                  </Figure.Caption>{" "}
                 </Figure>
               ))}
             </Stack>
