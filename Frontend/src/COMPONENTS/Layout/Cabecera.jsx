@@ -4,7 +4,7 @@ import { ReactComponent as Logo } from "../../IMAGES/SVG/LOGO.svg";
 import Buscador from "../Common/Buscador";
 import {
   HeartIcon,
-  ShoppingBagIcon,
+  ShoppingCartIcon,
   UserIcon,
 } from "@heroicons/react/24/outline";
 import "./Cabecera.css";
@@ -115,7 +115,7 @@ const Cabecera = () => {
                 Favoritos
               </Nav.Link>
               <Nav.Link as={Link} to="/carrito">
-                <ShoppingBagIcon
+                <ShoppingCartIcon
                   style={{
                     color: "rgba(240, 248, 255, 0.616)",
                     height: "24px",

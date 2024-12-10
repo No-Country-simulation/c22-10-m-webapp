@@ -1,4 +1,3 @@
-import { useShoppingCart } from "use-shopping-cart";
 import { CartItems } from "./CartItems";
 import { Producto } from "../Productos/Producto";
 
@@ -23,12 +22,9 @@ const productData = [
 
 export function Carrito() {
   /* Gets the totalPrice and a method for redirecting to Stripe */
-  const { redirectToCheckout, cartCount } = useShoppingCart();
 
   return (
-    <div>
-      <h2>Mi carrito de compras</h2>
-      <p>{cartCount} productos agregados</p>
+    <div style={{ width: "100%" }}>
       {/* Renders the products */}
       {productData.map((product) => (
         <Producto product={product} />
@@ -37,9 +33,6 @@ export function Carrito() {
       {/* This is where we'll render our cart */}
 
       <CartItems />
-
-      {/* Redirects the user to Stripe */}
-      <button onClick={redirectToCheckout}>Checkout</button>
     </div>
   );
 }

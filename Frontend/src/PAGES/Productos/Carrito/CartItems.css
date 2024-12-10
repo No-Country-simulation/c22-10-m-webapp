@@ -1,3 +1,125 @@
-.cart-items {
-  border: solid black 1px;
+.tabla-carrito td {
+  height: 20vh;
+  position: relative;
+}
+.container-prod img {
+  height: 12vh;
+  width: auto;
+}
+.cart-item {
+  border-bottom: solid gray 1px;
+}
+.container-prod {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  justify-content: flex-start !important;
+}
+.indice-prod-cart {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+.container-vacio {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.titulo-cart {
+  padding: 5vh 0;
+}
+.tabla-carrito {
+  caption-side: top;
+  width: 82%;
+  margin: auto;
+  height: 100%;
+}
+.tabla-carrito thead {
+  background-color: rgb(56, 45, 45);
+  color: white;
+  overflow: hidden;
+  font-size: 1.3rem;
+}
+.tabla-carrito thead tr th {
+  text-align: center;
+}
+.tabla-carrito th:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.tabla-carrito th:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.container-flex {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.flechas-cart {
+  height: 20px;
+  width: auto;
+  margin: 0 10%;
+  cursor: pointer;
+}
+.cart-actions {
+  background-color: rgb(56, 45, 45);
+  color: wheat;
+  height: 32%;
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart-actions p {
+  margin: 0;
+}
+.container-valor {
+  justify-content: flex-end;
+}
+.container-valor > * {
+  margin: 0 10%;
+}
+.container-checkout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  float: right;
+  margin: 5vh 0 10vh 0;
+}
+.container-checkout .info {
+  width: max-content;
+}
+.info p {
+  display: flex;
+  justify-content: space-between;
+}
+.container-checkout .btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px 0;
+}
+.container-checkout .btns a {
+  border-radius: 100px;
+  padding: 5px 10px;
+  width: 30%;
+  border: solid 2px rgb(72, 58, 58);
+  text-align: center;
+}
+.container-checkout .btns > :nth-child(1) {
+  color: rgb(72, 58, 58);
+  background-color: transparent;
+}
+
+.container-checkout .btns > :nth-child(2) {
+  background-color: rgb(56, 45, 45);
+  color: wheat;
 }

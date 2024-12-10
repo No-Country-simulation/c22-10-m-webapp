@@ -46,6 +46,10 @@ const router = createBrowserRouter([
         path: "favoritos",
         element: <Favoritos />,
       },
+      {
+        path: "/carrito",
+        element: <Carrito />,
+      },
     ],
   },
 
@@ -66,10 +70,6 @@ const router = createBrowserRouter([
         element: <Register />,
       },
     ],
-  },
-  {
-    path: "/carrito",
-    element: <Carrito />,
   },
 ]);
 function App() {
