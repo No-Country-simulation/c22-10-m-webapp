@@ -7,7 +7,7 @@ from .views import (
     DetallePedidoListCreateView, DetallePedidoRetrieveUpdateDestroyView,
     CategoriaListCreateView, CategoriaRetrieveUpdateDestroyView,
     ReseñaListCreateView, ReseñaRetrieveUpdateDestroyView,
-
+    KitListCreateView
 )
 
 # Router para el endpoint de kits
@@ -20,7 +20,7 @@ router = DefaultRouter()
 
 urlpatterns = [
     #kit
-
+    path('kits/', KitListCreateView.as_view(), name='kit-list-create'),
 
     # Usuarios
     path('usuarios/', UsuarioListCreateView.as_view(), name='usuario-list-create'),
