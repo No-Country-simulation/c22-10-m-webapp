@@ -3,9 +3,9 @@ import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'default-secret-key')
+SECRET_KEY = 'django-insecure-mt!hamx$2$iny!@26&q0q^oz4$yf8pock2s*9=fy^rakyz0eap'
 
-DEBUG = False
+DEBUG = True
 
 
 
@@ -79,8 +79,8 @@ USE_TZ = True
 
 # Archivos estáticos
 STATIC_URL = 'static/'
-#STATIC_ROOT = BASE_DIR / 'staticfiles'
-#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Default primary key field type
