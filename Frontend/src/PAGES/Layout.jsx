@@ -69,7 +69,13 @@ export const Layout = () => {
                 <Link>
                   <h5>Asistencia</h5>
                 </Link>
-                <Link>Contacto</Link>
+                <a
+                  href="https://wa.me/542616268274"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Contacto
+                </a>{" "}
                 <Link>Preguntas frecuentes</Link>
                 <Link>Métodos de pago</Link>
                 <Link>Devoluciones</Link>
