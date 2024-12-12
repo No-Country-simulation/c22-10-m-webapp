@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Stack, Card, Container, Row, Col } from "react-bootstrap";
 import kitfoto from "../../../IMAGES/WEBP/spa.webp";
 
-const ToggleButton = ({ isActive, onClick, children }) => (
+const ToggleButton = ({ isActive, isDay, onClick, children }) => (
   <button
     style={{
       width: "30%",
@@ -10,8 +10,10 @@ const ToggleButton = ({ isActive, onClick, children }) => (
       height: "max-content",
       backgroundColor: "transparent",
       border: "none",
-      borderBottom: isActive ? "1px solid black" : "none",
-      color: isActive ? "rgb(254, 250, 249)" : "rgb(15, 14, 14)",
+      borderBottom: isActive
+        ? `1px solid ${isDay ? "black" : "white"}`
+        : "none",
+      color: isActive ? (isDay ? "black" : "white") : isDay ? "black" : "white",
     }}
     onClick={onClick}
   >
@@ -66,12 +68,14 @@ const KitCard = ({ kit, index, kitToggles, handleToggle }) => {
           <Row className="h-25 d-flex align-items-center justify-content-evenly">
             <ToggleButton
               isActive={isDay}
+              isDay={isDay}
               onClick={() => handleToggle(index, 0)}
             >
-              Dia
+              Día
             </ToggleButton>
             <ToggleButton
               isActive={!isDay}
+              isDay={isDay}
               onClick={() => handleToggle(index, 1)}
             >
               Noche
