@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+## Replace this file
+*.pyc
+__pycache__/
