@@ -1,2 +1,4 @@
 ## Replace this file
+*.pyc
+__pycache__/
 
