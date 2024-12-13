@@ -26,7 +26,16 @@ export const Populares = () => {
   ];
   return (
     <section className="container-pop">
-      <h1>{title}</h1>
+      <h1
+        style={{
+          fontFamily: '"Montserrat", serif',
+          fontOpticalSizing: "auto",
+          fontWeight: 700,
+          fontStyle: "normal",
+        }}
+      >
+        {title}
+      </h1>
       <section>
         {datosPopu.map((producto, index) => (
           <Card

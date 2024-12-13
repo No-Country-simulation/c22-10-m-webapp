@@ -1,8 +1,21 @@
 import { Link, Outlet } from "react-router-dom";
 import Cabecera from "../COMPONENTS/Layout/Cabecera";
-import { Col, Container, Image, Row, Stack } from "react-bootstrap";
-import logo_footer from "../IMAGES/WEBP/image.png";
+import { Col, Container, Row, Stack } from "react-bootstrap";
 import { ReactComponent as Logo } from "../IMAGES/SVG/LOGO.svg";
+
+const footerLinkStyle = {
+  fontFamily: '"Montserrat", serif',
+  fontOpticalSizing: "auto",
+  fontWeight: 400,
+  fontStyle: "normal",
+};
+const footerh5Style = {
+  fontFamily: '"Montserrat", serif',
+  fontOpticalSizing: "auto",
+  fontWeight: 700,
+  fontStyle: "normal",
+};
+
 export const Layout = () => {
   return (
     <div
@@ -41,11 +54,11 @@ export const Layout = () => {
             <Col xs={12} sm={6} md={3} lg={2} className="mb-3 mb-lg-0">
               <Stack gap={2}>
                 <Link>
-                  <h5>Productos</h5>
+                  <h5 style={footerh5Style}>Productos</h5>
                 </Link>
-                <Link>Productos populares</Link>
-                <Link>Productos</Link>
-                <Link>Kits</Link>
+                <Link style={footerLinkStyle}>Productos populares</Link>
+                <Link style={footerLinkStyle}>Productos</Link>
+                <Link style={footerLinkStyle}>Kits</Link>
               </Stack>
             </Col>
 
@@ -53,13 +66,13 @@ export const Layout = () => {
             <Col xs={12} sm={6} md={3} lg={2} className="mb-3 mb-lg-0">
               <Stack gap={1}>
                 <Link>
-                  <h5>Sobre nosotros</h5>
+                  <h5 style={footerh5Style}>Sobre nosotros</h5>
                 </Link>
-                <Link>Pacis</Link>
-                <Link>¿Por qué elegirnos?</Link>
-                <Link>Propuesta de valor</Link>
-                <Link>Sobre nuestros productos</Link>
-                <Link>Reseñas</Link>
+                <Link style={footerLinkStyle}>Pacis</Link>
+                <Link style={footerLinkStyle}>¿Por qué elegirnos?</Link>
+                <Link style={footerLinkStyle}>Propuesta de valor</Link>
+                <Link style={footerLinkStyle}>Sobre nuestros productos</Link>
+                <Link style={footerLinkStyle}>Reseñas</Link>
               </Stack>
             </Col>
 
@@ -67,20 +80,21 @@ export const Layout = () => {
             <Col xs={12} sm={6} md={3} lg={2} className="mb-3 mb-lg-0">
               <Stack gap={1}>
                 <Link>
-                  <h5>Asistencia</h5>
+                  <h5 style={footerh5Style}>Asistencia</h5>
                 </Link>
                 <a
                   href="https://wa.me/542616268274"
                   target="_blank"
                   rel="noopener noreferrer"
+                  style={footerLinkStyle}
                 >
                   Contacto
-                </a>{" "}
-                <Link>Preguntas frecuentes</Link>
-                <Link>Métodos de pago</Link>
-                <Link>Devoluciones</Link>
-                <Link>Cancelar pedido</Link>
-                <Link>Términos y condiciones</Link>
+                </a>
+                <Link style={footerLinkStyle}>Preguntas frecuentes</Link>
+                <Link style={footerLinkStyle}>Métodos de pago</Link>
+                <Link style={footerLinkStyle}>Devoluciones</Link>
+                <Link style={footerLinkStyle}>Cancelar pedido</Link>
+                <Link style={footerLinkStyle}>Términos y condiciones</Link>
               </Stack>
             </Col>
 
@@ -88,9 +102,9 @@ export const Layout = () => {
             <Col xs={12} sm={6} md={3} lg={2} className="mb-3 mb-lg-0">
               <Stack gap={1}>
                 <Link>
-                  <h5>Seguinos</h5>
+                  <h5 style={footerh5Style}>Seguinos</h5>
                 </Link>
-                <Link>Redes sociales</Link>
+                <Link style={footerLinkStyle}>Redes sociales</Link>
               </Stack>
             </Col>
           </Row>

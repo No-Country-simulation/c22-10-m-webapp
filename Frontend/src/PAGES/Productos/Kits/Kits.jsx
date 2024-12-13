@@ -5,6 +5,10 @@ const ToggleButton = ({ isActive, isDay, onClick, children }) => (
   <button
     style={{
       width: "30%",
+      fontFamily: '"Montserrat", serif',
+      fontOpticalSizing: "auto",
+      fontWeight: 600,
+      fontStyle: "normal",
       minWidth: "max-content",
       height: "max-content",
       backgroundColor: "transparent",
@@ -84,24 +88,28 @@ const KitCard = ({ kit, index, kitToggles, handleToggle }) => {
           </Row>
           <Row className="h-75">
             <Row className="h-25">
-              <h5>Descripción:</h5>
-              <p>{isDay ? kit.descripcion_dia : kit.descripcion_noche}</p>
+              <h5 style={kit700style}>Descripción:</h5>
+              <p style={kit400style}>
+                {isDay ? kit.descripcion_dia : kit.descripcion_noche}
+              </p>
             </Row>
             <Row className="h-25">
-              <h5>Incluye:</h5>
-              <p>{isDay ? kit.kit_dia.join(", ") : kit.kit_noche.join(", ")}</p>
+              <h5 style={kit700style}>Incluye:</h5>
+              <p style={kit400style}>
+                {isDay ? kit.kit_dia.join(", ") : kit.kit_noche.join(", ")}
+              </p>
             </Row>
             <Row className="h-25 w-100 d-flex align-items-center">
               <Col xs="auto">
-                <h5>Beneficios:</h5>
-                <p>
+                <h5 style={kit700style}>Beneficios:</h5>
+                <p style={kit400style}>
                   {isDay
                     ? kit.beneficios_dia.join(", ")
                     : kit.beneficios_noche.join(", ")}
                 </p>
               </Col>
               <Col xs="auto" className="h-50 ms-auto d-flex flex-column">
-                <span className="mt-auto">
+                <span className="mt-auto" style={kit500style}>
                   Precio: ${isDay ? kit.precio_dia : kit.precio_noche}
                 </span>
               </Col>
@@ -112,7 +120,25 @@ const KitCard = ({ kit, index, kitToggles, handleToggle }) => {
     </Card>
   );
 };
+const kit700style = {
+  fontFamily: '"Montserrat", serif',
+  fontOpticalSizing: "auto",
+  fontWeight: 700,
+  fontStyle: "normal",
+};
 
+const kit500style = {
+  fontFamily: '"Montserrat", serif',
+  fontOpticalSizing: "auto",
+  fontWeight: 500,
+  fontStyle: "normal",
+};
+const kit400style = {
+  fontFamily: '"Montserrat", serif',
+  fontOpticalSizing: "auto",
+  fontWeight: 400,
+  fontStyle: "normal",
+};
 export const Kits = () => {
   const [kitsDatos, setKitsDatos] = useState([]);
   const [kitToggles, setKitToggles] = useState([]);

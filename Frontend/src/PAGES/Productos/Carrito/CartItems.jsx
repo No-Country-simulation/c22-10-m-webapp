@@ -24,7 +24,7 @@ export const CartItems = () => {
     <div className="cart-items">
       {cartItems.length === 0 ? (
         <div className="container-vacio">
-          <h3>Aún no tenés producto en tu carrito de compras</h3>
+          <h3>Aún no tenés productos en tu carrito de compras</h3>
           <p>
             Cuando elijas tus productos te mostraremos el resumen de tu compra
             con la información de descuentos y promociones disponibles.

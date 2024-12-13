@@ -15,6 +15,11 @@
 }
 .navbar a {
   color: white;
+
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 .nav-link:hover {
   color: rgb(83, 77, 77); /* Color al hacer hover */

@@ -96,11 +96,22 @@ export const Banner = () => {
     <Slider {...settings} className="slider-banner">
       <figure className="item-banner">
         <img src={b1} alt="Banner" />
-        <figcaption>Texto descriptivo</figcaption>
+        <figcaption>
+          <h1>El tiempo que te das a ti misma es tiempo bien invertido.</h1>
+          <p>
+            Haz de tu rutina un ritual y convierte cada día en una experiencia
+            única.
+          </p>
+        </figcaption>
       </figure>{" "}
       <figure className="item-banner">
         <img src={b2} alt="Banner" />
-        <figcaption>Texto descriptivo</figcaption>
+        <figcaption>
+          <h1>Tu cuerpo y mente te agradecerán cada instante de cuidado.</h1>
+          <p>
+            No importa cuán agitado sea tu día, siempre hay un momento para vos.
+          </p>
+        </figcaption>
       </figure>
     </Slider>
   );

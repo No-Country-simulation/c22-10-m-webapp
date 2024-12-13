@@ -28,6 +28,18 @@
   align-items: center;
   justify-content: center;
 }
+.container-vacio h3 {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.container-vacio p {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
 .titulo-cart {
   padding: 5vh 0;
 }
