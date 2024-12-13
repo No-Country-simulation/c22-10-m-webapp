@@ -38,9 +38,9 @@ export const Producto = () => {
     addItem(item);
   };
 
-  // Si está cargando, simplemente no renderizamos nada (o puedes agregar un spinner)
+  // Si está cargando, mostramos un indicador de carga (spinner)
   if (loading) {
-    return null; // O agrega un <div className="loader"></div> si quieres mostrar un spinner
+    return <div className="loader">Cargando...</div>; // Agrega un spinner aquí
   }
 
   return (
@@ -49,25 +49,24 @@ export const Producto = () => {
         <img src={producto.imagen} alt={producto.nombre} />
         <div className="info-producto">
           <h3>{producto.nombre}</h3>
-          <div>estrellitas</div>
+          {/* Aquí puedes agregar una representación de las estrellas */}
+          <div>{producto.calificacion && `⭐ ${producto.calificacion}`}</div>
           <p>{producto.descripcion}</p>
           <div className="container-beneficios">
             <div>
               <h4>Beneficios</h4>
               <ul>
-                <li>elemento de lista</li>
-                <li>elemento de lista</li>
-                <li>elemento de lista</li>
-                <li>elemento de lista</li>
+                {producto.beneficios?.map((beneficio, index) => (
+                  <li key={index}>{beneficio}</li>
+                ))}
               </ul>
             </div>
             <div className="ingredientes">
               <h4>Ingredientes</h4>
               <ul>
-                <li>elemento de lista</li>
-                <li>elemento de lista</li>
-                <li>elemento de lista</li>
-                <li>elemento de lista</li>
+                {producto.ingredientes?.map((ingrediente, index) => (
+                  <li key={index}>{ingrediente}</li>
+                ))}
               </ul>
             </div>
           </div>

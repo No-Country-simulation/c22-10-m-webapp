@@ -11,6 +11,7 @@
   max-width: 30%;
   min-height: 100%;
   height: auto;
+  border-radius: 10px;
 }
 .info-producto {
   flex: 1;
@@ -20,9 +21,28 @@
   justify-content: space-between;
   padding-left: 40px;
 }
+.info-producto h3,
+.container-beneficios h4,
+.producto strong {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.info-producto p,
+.info-producto ul {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
 .container-beneficios {
   display: flex;
   position: relative;
+}
+.container-beneficios div {
+  flex: 1;
+  max-width: 50%;
 }
 .ingredientes {
   position: absolute;
@@ -36,6 +56,10 @@
 .container-btns > :nth-child(2) {
   border-radius: 50px;
   margin: 5px 30px 5px 0;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 .container-btns > :nth-child(1) {
   flex: 0.3;

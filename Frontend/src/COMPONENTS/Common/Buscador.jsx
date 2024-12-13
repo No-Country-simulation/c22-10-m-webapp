@@ -27,10 +27,12 @@ const Buscador = () => {
       backgroundColor: "rgb(167, 152, 154)", // Fondo del input principal
       borderRadius: "50px",
       border: "none", // Esquinas redondeadas
+      zIndex: 10, // Asegura que el control esté encima de otros elementos
     }),
     menu: (base) => ({
       ...base,
       backgroundColor: "rgb(167, 152, 154)", // Fondo del menú desplegable
+      zIndex: 20, // Asegura que el menú desplegable esté encima del control
     }),
     option: (base, state) => ({
       ...base,
@@ -38,6 +40,7 @@ const Buscador = () => {
         ? "rgb(130, 119, 120)" // Fondo al hacer hover
         : "rgb(167, 152, 154)", // Fondo predeterminado
       color: "#ffffff", // Color del texto
+      zIndex: 30, // Asegura que las opciones estén encima del menú
     }),
     placeholder: (base) => ({
       ...base,
