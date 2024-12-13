@@ -17,6 +17,23 @@ Nuestro proyecto es una página de comercio electrónico especializada en produc
 ## ¿Por Qué Elegirnos?
 Nuestro enfoque en la seguridad, la comunidad y una experiencia de usuario sin igual nos convierte en más que un simple sitio de comercio electrónico. Aquí, cada visita es una oportunidad para el autocuidado y el bienestar personal.
 
+## Equipo
+
+| url | nombre  | rol |
+|:-------------:|:---------------:| :-------------:|
+| [![image](https://img.shields.io/badge/linkedin-%230A66C4.svg)](https://www.linkedin.com/in/natalypradomoreno)         | Nataly Prado               | PM          |
+| [![image](https://img.shields.io/badge/linkedin-%230A66C4.svg)](https://andres-segura.dev/blog)         | Andrés Segura              | PM          |
+| [![image](https://img.shields.io/badge/linkedin-%230A66C2.svg)](https://www.linkedin.com/in/mitchell-chavarria-botello/)         | Mitchell Chavarria         | QA Tester   |
+| [![image](https://img.shields.io/badge/linkedin-%230A66C2.svg)](https://github.com/lucero-rey)         | Lucero Rey                 | UX/UI       |
+| [![image](https://img.shields.io/badge/linkedin-%230A66C2.svg)](https://www.linkedin.com/in/candela-abril-rearte-775471204)         | Candela Abril Rearte       | UX/UI       |
+| [![image](https://img.shields.io/badge/linkedin-%230A66C2.svg)](https://www.linkedin.com/in/benjamorenosaez)         | Benjamin Moreno            | FrontEnd    |
+| [![image](https://img.shields.io/badge/linkedin-%230A66C2.svg)](https://www.linkedin.com/in/luis-celletti-69722b67)         | Luis Celletti              | FrontEnd    |
+| [![image](https://img.shields.io/badge/linkedin-%230A66C2.svg)](https://www.linkedin.com/in/juan-jose-giraldo-272b592b6)         | Juan José Giraldo Patiño  | Fullstack   |
+
+
+
+
+
 ## Contribuir
 Si estás interesado en contribuir a nuestro proyecto, por favor revisa la sección de `CONTRIBUTING.md` para más detalles sobre cómo puedes hacerlo.
 # back-nocountry_servidorpublico
