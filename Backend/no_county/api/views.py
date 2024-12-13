@@ -1,10 +1,11 @@
 from django.shortcuts import render
 
-# Create your views here.
-from rest_framework import viewsets
+# Create your views here
+from rest_framework import generics
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
-from .models import Usuario, Producto, Pedido, DetallePedido, Categoria, Reseña
-from .serializers import UsuarioSerializer, ProductoSerializer, PedidoSerializer, DetallePedidoSerializer, CategoriaSerializer, ReseñaSerializer
+from .models import Usuario, Producto, Pedido, DetallePedido, Categoria, Reseña, Kit
+from .serializers import UsuarioSerializer, ProductoSerializer, PedidoSerializer, DetallePedidoSerializer, CategoriaSerializer, ReseñaSerializer, KitSerializer
+
 
 # Usuario
 class UsuarioListCreateView(ListCreateAPIView):
@@ -59,3 +60,7 @@ class ReseñaListCreateView(ListCreateAPIView):
 class ReseñaRetrieveUpdateDestroyView(RetrieveUpdateDestroyAPIView):
     queryset = Reseña.objects.all()
     serializer_class = ReseñaSerializer
+
+class KitListCreateView(generics.ListCreateAPIView):
+    queryset = Kit.objects.all()
+    serializer_class = KitSerializer

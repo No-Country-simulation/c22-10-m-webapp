@@ -1,5 +1,7 @@
 from rest_framework import serializers
-from .models import Usuario, Producto, Pedido, DetallePedido, Categoria, Reseña
+from .models import Usuario, Producto, Pedido, DetallePedido, Categoria, Reseña, Kit
+
+
 
 class UsuarioSerializer(serializers.ModelSerializer):
     class Meta:
@@ -32,3 +34,8 @@ class ReseñaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Reseña
         fields = '__all__'
+
+class KitSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Kit
+        fields = ['id', 'nombre_dia','descripcion_dia', 'kit_dia', 'beneficios_dia', 'precio_dia', 'img_dia', "nombre_noche", 'descripcion_noche', 'kit_noche', 'beneficios_noche', 'precio_noche', 'img_noche' ]
