@@ -25,3 +25,6 @@ yarn-error.log*
 ## Replace this file
 *.pyc
 __pycache__/
+
+# Ignorar el entorno virtual
+env/
