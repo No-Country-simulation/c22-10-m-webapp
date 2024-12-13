@@ -1,17 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Stack, Card, Container, Row, Col } from "react-bootstrap";
-import kitfoto from "../../../IMAGES/WEBP/spa.webp";
 
-const ToggleButton = ({ isActive, onClick, children }) => (
+const ToggleButton = ({ isActive, isDay, onClick, children }) => (
   <button
     style={{
       width: "30%",
+      fontFamily: '"Montserrat", serif',
+      fontOpticalSizing: "auto",
+      fontWeight: 600,
+      fontStyle: "normal",
       minWidth: "max-content",
       height: "max-content",
       backgroundColor: "transparent",
       border: "none",
-      borderBottom: isActive ? "1px solid black" : "none",
-      color: isActive ? "rgb(254, 250, 249)" : "rgb(15, 14, 14)",
+      borderBottom: isActive
+        ? `1px solid ${isDay ? "black" : "white"}`
+        : "none",
+      color: isActive ? (isDay ? "black" : "white") : isDay ? "black" : "white",
     }}
     onClick={onClick}
   >
@@ -33,8 +38,9 @@ const KitCard = ({ kit, index, kitToggles, handleToggle }) => {
         border: "none",
         backgroundColor: isDay ? "rgb(248, 246, 246)" : "rgb(77, 70, 71)",
         color: isDay ? "rgb(15, 14, 14)" : "rgb(254, 250, 249)",
+        margin: "15px", // Añadimos margen entre las tarjetas
       }}
-      className="w-75"
+      className="w-75 mx-auto" // Centro de las tarjetas
     >
       <h5
         style={{
@@ -47,13 +53,14 @@ const KitCard = ({ kit, index, kitToggles, handleToggle }) => {
           borderRadius: "50px",
         }}
       >
-        Blom nose
+        {kit.nombre_dia}
       </h5>
       <Card.Img
         variant="top"
-        src={isDay ? kit.dia.img : kit.noche.img}
+        src={isDay ? kit.img_dia : kit.img_noche}
         style={{
           width: "40%",
+          minWidth: "40%",
           height: "auto",
           objectFit: "cover",
           margin: "20px",
@@ -66,12 +73,14 @@ const KitCard = ({ kit, index, kitToggles, handleToggle }) => {
           <Row className="h-25 d-flex align-items-center justify-content-evenly">
             <ToggleButton
               isActive={isDay}
+              isDay={isDay}
               onClick={() => handleToggle(index, 0)}
             >
-              Dia
+              Día
             </ToggleButton>
             <ToggleButton
               isActive={!isDay}
+              isDay={isDay}
               onClick={() => handleToggle(index, 1)}
             >
               Noche
@@ -79,22 +88,30 @@ const KitCard = ({ kit, index, kitToggles, handleToggle }) => {
           </Row>
           <Row className="h-75">
             <Row className="h-25">
-              <h5>Descripción:</h5>
-              <p>{isDay ? kit.dia.parrafo : kit.noche.parrafo}</p>
+              <h5 style={kit700style}>Descripción:</h5>
+              <p style={kit400style}>
+                {isDay ? kit.descripcion_dia : kit.descripcion_noche}
+              </p>
             </Row>
             <Row className="h-25">
-              <h5>Incluye:</h5>
-              <p>{isDay ? kit.dia.kit.p1 : kit.noche.kit.p1}</p>
-              <p>{isDay ? kit.dia.kit.p2 : kit.noche.kit.p2}</p>
+              <h5 style={kit700style}>Incluye:</h5>
+              <p style={kit400style}>
+                {isDay ? kit.kit_dia.join(", ") : kit.kit_noche.join(", ")}
+              </p>
             </Row>
             <Row className="h-25 w-100 d-flex align-items-center">
               <Col xs="auto">
-                <h5>Beneficios:</h5>
-                <p>parrafo</p>
-                <p>parrafo</p>
+                <h5 style={kit700style}>Beneficios:</h5>
+                <p style={kit400style}>
+                  {isDay
+                    ? kit.beneficios_dia.join(", ")
+                    : kit.beneficios_noche.join(", ")}
+                </p>
               </Col>
               <Col xs="auto" className="h-50 ms-auto d-flex flex-column">
-                <span className="mt-auto">Precio: $50000</span>
+                <span className="mt-auto" style={kit500style}>
+                  Precio: ${isDay ? kit.precio_dia : kit.precio_noche}
+                </span>
               </Col>
             </Row>
           </Row>
@@ -103,53 +120,38 @@ const KitCard = ({ kit, index, kitToggles, handleToggle }) => {
     </Card>
   );
 };
+const kit700style = {
+  fontFamily: '"Montserrat", serif',
+  fontOpticalSizing: "auto",
+  fontWeight: 700,
+  fontStyle: "normal",
+};
 
+const kit500style = {
+  fontFamily: '"Montserrat", serif',
+  fontOpticalSizing: "auto",
+  fontWeight: 500,
+  fontStyle: "normal",
+};
+const kit400style = {
+  fontFamily: '"Montserrat", serif',
+  fontOpticalSizing: "auto",
+  fontWeight: 400,
+  fontStyle: "normal",
+};
 export const Kits = () => {
-  const kitsDatos = [
-    {
-      nombre: "kit 1",
-      dia: {
-        img: kitfoto,
-        kit: { p1: "jabon", p2: "aceite", p3: "toalla", p4: "crema" },
-        parrafo: "parrafo dia",
-      },
-      noche: {
-        img: kitfoto,
-        kit: { p1: "jabon 2", p2: "aceite 2", p3: "toalla 2", p4: "crema 2" },
-        parrafo: "parrafo noche",
-      },
-    },
-    {
-      nombre: "kit 2",
-      dia: {
-        img: kitfoto,
-        kit: { p1: "jabon", p2: "aceite", p3: "toalla", p4: "crema" },
-        parrafo: "parrafo dia",
-      },
-      noche: {
-        img: kitfoto,
-        kit: { p1: "jabon 2", p2: "aceite 2", p3: "toalla 2", p4: "crema 2" },
-        parrafo: "parrafo noche",
-      },
-    },
-    {
-      nombre: "kit 3",
-      dia: {
-        img: kitfoto,
-        kit: { p1: "jabon 3", p2: "aceite 3", p3: "toalla 3", p4: "crema 3" },
-        parrafo: "parrafo dia",
-      },
-      noche: {
-        img: kitfoto,
-        kit: { p1: "jabon 2", p2: "aceite 2", p3: "toalla 2", p4: "crema 2" },
-        parrafo: "parrafo noche",
-      },
-    },
-  ];
+  const [kitsDatos, setKitsDatos] = useState([]);
+  const [kitToggles, setKitToggles] = useState([]);
 
-  const [kitToggles, setKitToggles] = useState(
-    new Array(kitsDatos.length).fill(0)
-  );
+  useEffect(() => {
+    fetch("http://127.0.0.1:8000/api/kits/")
+      .then((response) => response.json())
+      .then((data) => {
+        setKitsDatos(data);
+        setKitToggles(new Array(data.length).fill(0)); // Por defecto, todos los kits se mostrarán en "Día"
+      })
+      .catch((error) => console.error("Error al cargar los datos:", error));
+  }, []);
 
   const handleToggle = (index, value) => {
     const updatedToggles = [...kitToggles];
@@ -158,27 +160,29 @@ export const Kits = () => {
   };
 
   return (
-    <section>
-      <h1 style={{ padding: "5vh 0 0 15vw" }}>Kits</h1>
-      <Stack gap={5} className="my-5 align-items-center">
-        {kitsDatos.map((kit, index) => (
-          <article
-            key={index}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <KitCard
-              kit={kit}
-              index={index}
-              kitToggles={kitToggles}
-              handleToggle={handleToggle}
-            />
-          </article>
-        ))}
-      </Stack>
-    </section>
+    <Container className="my-5">
+      <Row className="justify-content-center">
+        {" "}
+        {/* Alinea las tarjetas al centro */}
+        <Col xs="auto">
+          <Stack gap={5}>
+            {kitsDatos.slice(0, 4).map(
+              (
+                kit,
+                index // Solo toma los primeros 4 kits
+              ) => (
+                <KitCard
+                  key={kit.id}
+                  kit={kit}
+                  index={index}
+                  kitToggles={kitToggles}
+                  handleToggle={handleToggle}
+                />
+              )
+            )}
+          </Stack>
+        </Col>
+      </Row>
+    </Container>
   );
 };

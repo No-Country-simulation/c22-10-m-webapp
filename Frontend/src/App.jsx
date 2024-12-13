@@ -10,8 +10,8 @@ import { Carrito } from "./PAGES/Productos/Carrito/Carrito";
 import { Favoritos } from "./PAGES/Productos/Favoritos/Favoritos";
 import { Kits } from "./PAGES/Productos/Kits/Kits";
 import { Producto } from "./PAGES/Productos/Productos/Producto";
-import { Categoria } from "./PAGES/Productos/Productos/Categoria";
 import { Populares } from "./PAGES/Productos/Productos/Populares";
+import { Categoria } from "./PAGES/Productos/Productos/Categoria";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -46,6 +46,10 @@ const router = createBrowserRouter([
         path: "favoritos",
         element: <Favoritos />,
       },
+      {
+        path: "/carrito",
+        element: <Carrito />,
+      },
     ],
   },
 
@@ -66,10 +70,6 @@ const router = createBrowserRouter([
         element: <Register />,
       },
     ],
-  },
-  {
-    path: "/carrito",
-    element: <Carrito />,
   },
 ]);
 function App() {

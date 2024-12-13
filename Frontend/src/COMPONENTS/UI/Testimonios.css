@@ -8,6 +8,12 @@
   justify-content: space-evenly;
   background-color: #fefaf9;
 }
+.slider-container h1 {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
 .slider-testimonios {
   max-height: 50%;
 }
@@ -41,6 +47,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 .testimonio img {
   grid-area: foto;
@@ -53,6 +63,10 @@
   grid-area: usuario;
   margin: 0;
   padding: 0 20px;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 .testimonio div {
   grid-area: valoracion !important;
