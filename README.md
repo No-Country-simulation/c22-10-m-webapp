@@ -24,7 +24,7 @@ Nuestro enfoque en la seguridad, la comunidad y una experiencia de usuario sin i
 | [![image](https://img.shields.io/badge/linkedin-%230A66C4.svg)](https://www.linkedin.com/in/natalypradomoreno)         | Nataly Prado               | PM          |
 | [![image](https://img.shields.io/badge/linkedin-%230A66C4.svg)](https://andres-segura.dev/blog)         | Andrés Segura              | PM          |
 | [![image](https://img.shields.io/badge/linkedin-%230A66C2.svg)](https://www.linkedin.com/in/mitchell-chavarria-botello/)         | Mitchell Chavarria         | QA Tester   |
-| [![image](https://img.shields.io/badge/linkedin-%230A66C2.svg)](https://github.com/lucero-rey)         | Lucero Rey                 | UX/UI       |
+| [![image](https://img.shields.io/badge/linkedin-%230A66C2.svg)](https://www.linkedin.com/in/lucero-rey/)         | Lucero Rey                 | UX/UI       |
 | [![image](https://img.shields.io/badge/linkedin-%230A66C2.svg)](https://www.linkedin.com/in/candela-abril-rearte-775471204)         | Candela Abril Rearte       | UX/UI       |
 | [![image](https://img.shields.io/badge/linkedin-%230A66C2.svg)](https://www.linkedin.com/in/benjamorenosaez)         | Benjamin Moreno            | FrontEnd    |
 | [![image](https://img.shields.io/badge/linkedin-%230A66C2.svg)](https://www.linkedin.com/in/luis-celletti-69722b67)         | Luis Celletti              | FrontEnd    |
