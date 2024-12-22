@@ -20,19 +20,23 @@ const Buscador = () => {
         console.error("Error al cargar los productos:", error);
       });
   }, []);
-
   const customStyles = {
-    control: (base) => ({
+    control: (base, state) => ({
       ...base,
       backgroundColor: "rgb(167, 152, 154)", // Fondo del input principal
-      borderRadius: "50px",
-      border: "none", // Esquinas redondeadas
+      borderRadius: "50px", // Esquinas redondeadas
+      border: state.isFocused
+        ? "2px solid rgb(130, 119, 120)" // Borde al estar enfocado
+        : "2px solid rgb(200, 180, 180)", // Borde predeterminado
+      boxShadow: state.isFocused ? "0 0 5px rgb(130, 119, 120)" : "none", // Sombra al hacer foco
       zIndex: 10, // Asegura que el control esté encima de otros elementos
     }),
     menu: (base) => ({
       ...base,
+      borderRadius: "10px", // Esquinas redondeadas del menú desplegable
       backgroundColor: "rgb(167, 152, 154)", // Fondo del menú desplegable
-      zIndex: 20, // Asegura que el menú desplegable esté encima del control
+      scrollbarWidth: "thin", // Para navegadores como Firefox
+      scrollbarColor: "#827778 #a7989a", // Colores para la barra y el track
     }),
     option: (base, state) => ({
       ...base,
