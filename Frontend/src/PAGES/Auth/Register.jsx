@@ -78,7 +78,7 @@ export const Register = () => {
       </div>
       {errors.password && <p role="alert">{errors.password.message}</p>}
       <button type="submit" className="inputs submit-btn">
-        Ingresar
+        Registrarse
       </button>
     </form>
   );

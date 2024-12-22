@@ -23,6 +23,10 @@
   top: 45%;
   left: 8%;
   transform: translateY(-10%);
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 .login-register-container {
   /* background-color: rgba(128, 128, 128, 0.103); */
@@ -63,7 +67,10 @@
   display: flex;
   align-items: center;
   font-size: 1.4rem;
-  font-weight: 700;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
   color: aliceblue;
 }
 
@@ -80,7 +87,10 @@
 }
 
 .formulario h4 {
-  font-weight: 400;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 .inputs {
   border-radius: 50px;
@@ -89,18 +99,22 @@
   width: 100%;
   background-color: transparent;
   padding-left: 5%;
-  /* color: aliceblue; */
-  font-weight: 100;
   color: rgba(240, 248, 255, 0.616);
 }
 .inputs::placeholder {
   color: rgba(240, 248, 255, 0.616);
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 .submit-btn {
   background-color: rgb(79, 64, 64);
   color: #ffffff;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
   font-weight: 700;
-  letter-spacing: 1px;
+  font-style: normal;
   padding: initial;
 }
 .toggle-password {
@@ -113,4 +127,12 @@
 }
 .container-password {
   position: relative;
+}
+.logo-auth {
+  position: absolute;
+  top: 10%;
+  height: 15%;
+  width: auto;
+  fill: rgb(200, 196, 196);
+  stroke: rgb(200, 196, 196);
 }

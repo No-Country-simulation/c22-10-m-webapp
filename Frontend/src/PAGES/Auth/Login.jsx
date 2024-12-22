@@ -67,7 +67,7 @@ export const Login = () => {
       </div>
       {errors.password && <p role="alert">{errors.password.message}</p>}
       <button type="submit" className="inputs submit-btn">
-        Ingresar
+        Iniciar sesión
       </button>
     </form>
   );

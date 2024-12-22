@@ -5,6 +5,7 @@ import {
   ArrowLeftIcon,
   ArrowRightEndOnRectangleIcon,
 } from "@heroicons/react/24/outline";
+import { ReactComponent as Logo } from "../../IMAGES/SVG/LOGO.svg";
 
 export const Auth = () => {
   const location = useLocation(); // Hook para obtener la ruta actual
@@ -18,7 +19,7 @@ export const Auth = () => {
     // Actualizar el estado basado en la ruta actual
     if (location.pathname === "/auth/registro") {
       setAuthType({
-        h6: "¿Ya tienes una cuenta?",
+        h6: "¿Ya sos miembro?",
         boton: "Inicia sesión",
         link: "login",
         heroicon: (
@@ -33,7 +34,7 @@ export const Auth = () => {
       });
     } else {
       setAuthType({
-        h6: "¿Aún no tienes cuenta?",
+        h6: "¿No tenes cuenta?",
         boton: "Regístrate",
         link: "registro", // Cambiar al enlace de registro
       });
@@ -44,6 +45,7 @@ export const Auth = () => {
     <div className="fondo-auth">
       <h1>Aroma, textura y paz en perfecta sintonía.</h1>
       <div className="login-register-container">
+        <Logo className="logo-auth" />
         <Outlet />
       </div>
       <div className="container-link-auth">
