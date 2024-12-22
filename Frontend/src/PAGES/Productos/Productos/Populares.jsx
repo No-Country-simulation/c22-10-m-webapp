@@ -1,7 +1,7 @@
 import "./Populares.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import card_img from "../../../IMAGES/WEBP/BOMBAS DE SAL 1.jpg";
+import card_img from "../../../IMAGES/WEBP/prod_standart.webp";
 import { HeartIcon, ShoppingBagIcon } from "@heroicons/react/24/solid";
 import { Stack } from "react-bootstrap";
 import { useLocation } from "react-router-dom";

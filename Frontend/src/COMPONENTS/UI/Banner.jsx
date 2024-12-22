@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 import b1 from "../../IMAGES/WEBP/banner1.jpg";
-import b2 from "../../IMAGES/WEBP/banner2.jpg";
+import b2 from "../../IMAGES/WEBP/banner2.webp";
 import "./Banner.css";
 
 export const Banner = () => {

@@ -1,26 +1,26 @@
 import React from "react";
 import Slider from "react-slick";
 import "./Testimonios.css";
-import foto from "../../IMAGES/WEBP/fotocl.webp";
+import cliente from "../../IMAGES/WEBP/testimonio.webp";
 function Testimonios() {
   // consumir endpoint de testimonios
   const arrayTestimonios = [
     {
-      img: foto,
+      img: cliente,
       usuario: "Mariana M.",
       valoracion: "estrellitas",
       comentario:
         "e las hojas  las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.",
     },
     {
-      img: foto,
+      img: cliente,
       usuario: "Mariana M.",
       valoracion: "estrellitas",
       comentario:
         "e las hojas  las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.",
     },
     {
-      img: foto,
+      img: cliente,
       usuario: "Mariana M.",
       valoracion: "estrellitas",
       comentario:
