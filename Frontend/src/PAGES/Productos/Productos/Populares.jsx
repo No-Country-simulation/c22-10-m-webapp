@@ -1,12 +1,13 @@
 import "./Populares.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import card_img from "../../../IMAGES/WEBP/prod_standart.webp";
 import { HeartIcon, ShoppingBagIcon } from "@heroicons/react/24/solid";
 import { Stack } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 export const Populares = () => {
-  const location = useLocation(); // Este es el hook correcto
+  const location = useLocation();
+  const [productos, setProductos] = useState([]);
 
   // Cambia el título según la ruta
   const titles = {
@@ -14,16 +15,24 @@ export const Populares = () => {
     "/populares": "Productos Populares",
     "/favoritos": "Favoritos",
   };
+  useEffect(() => {
+    fetch("http://127.0.0.1:8000/api/productos/")
+      .then((res) => res.json())
+      .then((data) => {
+        const datos = data.slice(0, 6).map((caja) => ({
+          nombre: caja.nombre,
+          precio: caja.precio,
+          img: caja.imagen,
+        }));
+        setProductos(datos);
+      })
+      .catch((error) => {
+        console.error("Error al cargar los productos:", error);
+      });
+  }, []);
 
   const title = titles[location.pathname] || "Título por defecto";
-  const datosPopu = [
-    { img: card_img, nombre: "aceite granol", precio: "3000" },
-    { img: card_img, nombre: "aceite granol", precio: "3000" },
-    { img: card_img, nombre: "aceite granol", precio: "3000" },
-    { img: card_img, nombre: "aceite granol", precio: "3000" },
-    { img: card_img, nombre: "aceite granol", precio: "3000" },
-    { img: card_img, nombre: "aceite granol", precio: "3000" },
-  ];
+
   return (
     <section className="container-pop">
       <h1
@@ -37,7 +46,7 @@ export const Populares = () => {
         {title}
       </h1>
       <section>
-        {datosPopu.map((producto, index) => (
+        {productos.map((producto, index) => (
           <Card
             style={{ width: "80%", height: "70vh", margin: "auto" }}
             key={index}

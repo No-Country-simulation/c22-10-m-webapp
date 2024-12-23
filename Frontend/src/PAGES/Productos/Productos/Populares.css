@@ -34,7 +34,7 @@
   justify-content: center;
 }
 .container-btns-pop button {
-  background-color: rgb(72, 58, 58);
+  background-color: rgb(33, 27, 27);
   border: none;
 }
 .container-btns-pop > :nth-child(1) {
