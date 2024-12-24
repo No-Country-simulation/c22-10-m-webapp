@@ -5,9 +5,11 @@ import { HeartIcon, ShoppingBagIcon } from "@heroicons/react/24/solid";
 import { Stack } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useShoppingCart } from "use-shopping-cart";
 export const Populares = () => {
   const location = useLocation();
   const [productos, setProductos] = useState([]);
+  const { addItem } = useShoppingCart();
 
   // Cambia el título según la ruta
   const titles = {
@@ -33,6 +35,21 @@ export const Populares = () => {
 
   const title = titles[location.pathname] || "Título por defecto";
 
+  const enviarProducto = (index) => {
+    productos.forEach((prod, id) => {
+      if (id === index) {
+        const item = {
+          id: prod.id_producto,
+          name: prod.nombre,
+          price: prod.precio,
+          currency: "USD",
+          quantity: 1,
+          image: prod.img,
+        };
+        addItem(item);
+      }
+    });
+  };
   return (
     <section className="container-pop">
       <h1
@@ -66,13 +83,13 @@ export const Populares = () => {
             />
             <Card.Body className="d-flex flex-column justify-content-evenly">
               <Card.Title>{producto.nombre}</Card.Title>
-              <Card.Text>{producto.precio}</Card.Text>
+              <Card.Text>${producto.precio}</Card.Text>
               <Stack
                 direction="horizontal"
                 className="d-flex justify-content-between container-btns-pop"
               >
                 <Button>Comprar</Button>
-                <Button variant="primary">
+                <Button variant="primary" onClick={() => enviarProducto(index)}>
                   <ShoppingBagIcon
                     style={{
                       stroke: "white",
