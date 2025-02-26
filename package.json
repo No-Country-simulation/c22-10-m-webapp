@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-react": "^7.37.4",
+    "glob": "^11.0.1",
+    "rimraf": "^6.0.1"
+  }
+}
